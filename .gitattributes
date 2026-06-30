@@ -1,0 +1,18 @@
+# GitHub Linguist settings for a binary/download-only repo
+
+# Do not count HTML user guides or docs as the repo language
+*.html linguist-documentation
+*.htm linguist-documentation
+
+# Treat built app files as binary/download files
+*.exe binary
+*.dll binary
+*.pdb binary
+
+# Treat runtime/config/output files as generated so they do not affect language stats
+*.deps.json linguist-generated=true
+*.runtimeconfig.json linguist-generated=true
+
+# Node/data/config files
+NodeLibrary.json linguist-generated=true
+*.json linguist-generated=true

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scriptilyx SE Beginner User Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  --bg:#061114;
+  --panel:#0a1a1f;
+  --panel2:#0d252b;
+  --ink:#f2e8cf;
+  --muted:#b7c6c5;
+  --line:#007c7c;
+  --cyan:#00d8d8;
+  --orange:#ff9700;
+  --red:#ff5c5c;
+  --green:#41d17d;
+  --purple:#b78cff;
+  --code:#031014;
+  --shadow:0 14px 40px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(0,216,216,.12), transparent 30%),
+    radial-gradient(circle at 100% 10%, rgba(255,151,0,.10), transparent 28%),
+    var(--bg);
+  color:var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height:1.58;
+}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+header{
+  border-bottom:1px solid rgba(0,216,216,.28);
+  background:linear-gradient(135deg, rgba(8,35,40,.95), rgba(6,17,20,.95));
+  padding:34px 28px 26px;
+  position:relative;
+}
+header .brand{
+  max-width:1200px;
+  margin:0 auto;
+}
+.badge{
+  display:inline-block;
+  border:1px solid rgba(255,151,0,.65);
+  color:var(--orange);
+  border-radius:999px;
+  padding:5px 12px;
+  font-weight:700;
+  letter-spacing:.3px;
+  font-size:13px;
+  margin-bottom:12px;
+}
+h1{
+  margin:0;
+  font-size:42px;
+  letter-spacing:.2px;
+}
+.subtitle{
+  color:var(--muted);
+  font-size:18px;
+  max-width:900px;
+  margin:10px 0 0;
+}
+.version{
+  color:#9fb4b4;
+  font-size:13px;
+  margin-top:10px;
+}
+.layout{
+  display:grid;
+  grid-template-columns:310px minmax(0, 1fr);
+  gap:22px;
+  max-width:1480px;
+  margin:0 auto;
+  padding:24px;
+}
+nav{
+  position:sticky;
+  top:14px;
+  align-self:start;
+  background:rgba(10,26,31,.94);
+  border:1px solid rgba(0,216,216,.26);
+  border-radius:16px;
+  padding:16px;
+  box-shadow:var(--shadow);
+  max-height:calc(100vh - 28px);
+  overflow:auto;
+}
+nav h2{
+  margin:0 0 10px;
+  font-size:16px;
+  color:var(--orange);
+}
+nav a{
+  display:block;
+  padding:7px 8px;
+  border-radius:8px;
+  color:var(--ink);
+  font-size:14px;
+}
+nav a:hover{
+  background:rgba(0,216,216,.10);
+  text-decoration:none;
+}
+main{
+  min-width:0;
+}
+section{
+  background:rgba(10,26,31,.86);
+  border:1px solid rgba(0,216,216,.22);
+  border-radius:18px;
+  margin-bottom:20px;
+  padding:24px;
+  box-shadow:var(--shadow);
+}
+h2{
+  margin:0 0 12px;
+  color:var(--orange);
+  font-size:28px;
+}
+h3{
+  margin:24px 0 8px;
+  color:var(--cyan);
+  font-size:21px;
+}
+h4{
+  margin:18px 0 8px;
+  color:#f7dca5;
+  font-size:17px;
+}
+p{margin:10px 0}
+ul,ol{padding-left:24px}
+li{margin:5px 0}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.card{
+  background:rgba(13,37,43,.80);
+  border:1px solid rgba(0,124,124,.45);
+  border-radius:14px;
+  padding:15px;
+}
+.card h4{margin-top:0;color:var(--orange)}
+.callout{
+  border-left:4px solid var(--orange);
+  background:rgba(255,151,0,.08);
+  padding:12px 14px;
+  border-radius:10px;
+  margin:14px 0;
+}
+.success{
+  border-left:4px solid var(--green);
+  background:rgba(65,209,125,.08);
+}
+.warn{
+  border-left:4px solid var(--red);
+  background:rgba(255,92,92,.08);
+}
+.info{
+  border-left:4px solid var(--cyan);
+  background:rgba(0,216,216,.08);
+}
+.kbd{
+  display:inline-block;
+  background:#061114;
+  border:1px solid rgba(242,232,207,.25);
+  border-bottom-width:2px;
+  padding:1px 7px;
+  border-radius:6px;
+  font-family:Consolas, monospace;
+  font-size:.92em;
+}
+code, pre{
+  font-family:Consolas, "Courier New", monospace;
+}
+pre{
+  background:var(--code);
+  border:1px solid rgba(0,216,216,.25);
+  border-radius:12px;
+  padding:14px;
+  overflow:auto;
+  color:#e8fff8;
+}
+.inline{
+  background:#031014;
+  color:#e8fff8;
+  border:1px solid rgba(0,216,216,.18);
+  padding:1px 5px;
+  border-radius:5px;
+  font-family:Consolas, monospace;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+  overflow:hidden;
+  border-radius:12px;
+}
+th,td{
+  border:1px solid rgba(0,216,216,.18);
+  padding:10px;
+  vertical-align:top;
+}
+th{
+  background:#082328;
+  color:var(--orange);
+  text-align:left;
+}
+tr:nth-child(even) td{background:rgba(255,255,255,.025)}
+.icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:30px;
+  border:1px solid rgba(0,216,216,.35);
+  border-radius:9px;
+  background:#082328;
+  margin-right:8px;
+  font-size:18px;
+}
+.step{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:12px;
+  margin:12px 0;
+}
+.stepnum{
+  width:34px;height:34px;border-radius:50%;
+  background:var(--orange);color:#061114;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;
+}
+.hr{height:1px;background:rgba(0,216,216,.22);margin:20px 0}
+.small{font-size:13px;color:var(--muted)}
+.footer{
+  max-width:1480px;
+  margin:0 auto;
+  padding:16px 24px 36px;
+  color:var(--muted);
+  text-align:center;
+}
+@media(max-width:1050px){
+  .layout{grid-template-columns:1fr}
+  nav{position:relative;top:auto;max-height:none}
+  .grid,.grid3{grid-template-columns:1fr}
+  h1{font-size:34px}
+}
+@media print{
+  body{background:#fff;color:#111}
+  header,section,nav{box-shadow:none}
+  nav{display:none}
+  .layout{display:block;padding:0}
+  section{page-break-inside:avoid;border:1px solid #ccc}
+  a{color:#036}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="badge">Parallel Infinite Worlds Company</div>
+    <h1>Scriptilyx SE Beginner User Guide</h1>
+    <p class="subtitle">A step-by-step guide for building Space Engineers programmable block scripts with nodes, testing them, exporting them, and managing your node database.</p>
+    <p class="version">Updated: June 30, 2026 · App name: Scriptilyx SE · Created by ChaosVrOne</p>
+  </div>
+</header>
+
+<div class="layout">
+<nav>
+  <h2>Guide Contents</h2>
+  <a href="#what-is">1. What this app does</a>
+  <a href="#first-look">2. First look at the app</a>
+  <a href="#top-buttons">3. Top toolbar buttons</a>
+  <a href="#node-basics">4. Node basics</a>
+  <a href="#create-first-script">5. Create your first script</a>
+  <a href="#connect-nodes">6. Connecting nodes</a>
+  <a href="#generate-script">7. Generate and use the script</a>
+  <a href="#bottom-buttons">8. Bottom test/output buttons</a>
+  <a href="#node-database">9. Node Database Manager</a>
+  <a href="#bulk-tools">10. Bulk node tools</a>
+  <a href="#api-dump">11. Space Engineers API dump import</a>
+  <a href="#generic-nodes">12. Generic terminal nodes</a>
+  <a href="#scanner-instructions">13. Scanner instructions</a>
+  <a href="#variables">14. Variables</a>
+  <a href="#sections">15. Sections and subroutines</a>
+  <a href="#buttons-arguments">16. Button commands</a>
+  <a href="#repeat-router">17. Repeat and router nodes</a>
+  <a href="#timers">18. Timer nodes</a>
+  <a href="#mechanical">19. Pistons and rotors</a>
+  <a href="#examples">20. Beginner examples</a>
+  <a href="#troubleshooting">21. Troubleshooting</a>
+  <a href="#node-reference">22. Node reference</a>
+  <a href="#workflow">23. Recommended workflow</a>
+</nav>
+
+<main>
+<section id="what-is">
+  <h2>1. What this app does</h2>
+  <p><strong>Scriptilyx SE</strong> is a visual script builder for <strong>Space Engineers programmable block scripts</strong>. Instead of writing C# by hand, you place nodes on a graph, connect them in order, set their properties, and generate a Space Engineers script.</p>
+  <div class="grid">
+    <div class="card">
+      <h4>For beginners</h4>
+      <p>You can build simple scripts like “press a button, turn on a light, wait, turn it off” without knowing C#.</p>
+    </div>
+    <div class="card">
+      <h4>For advanced users</h4>
+      <p>You can use command routing, variables, sections, custom code, generic terminal actions, and imported API dump nodes.</p>
+    </div>
+  </div>
+  <div class="callout info">
+    <strong>Important:</strong> Scriptilyx SE creates scripts for the <strong>Space Engineers programmable block</strong>. You still paste the generated script into Space Engineers and run it from a programmable block, button panel, timer block, or cockpit toolbar.
+  </div>
+</section>
+
+<section id="first-look">
+  <h2>2. First look at the app</h2>
+  <p>The app is split into these main areas:</p>
+  <table>
+    <tr><th>Area</th><th>What it is for</th></tr>
+    <tr><td><strong>Top toolbar</strong></td><td>New, open, save, undo, generate scripts, open the guide, import API dumps, and manage the node database.</td></tr>
+    <tr><td><strong>Node Database</strong></td><td>The left panel where you search for nodes and add them to your graph. Logic appears first. Groups stay collapsed until you open them.</td></tr>
+    <tr><td><strong>Graph canvas</strong></td><td>The middle area where your script is built visually.</td></tr>
+    <tr><td><strong>Properties panel</strong></td><td>The right panel where you edit the selected node, such as block name, speed, text, argument, or wait time.</td></tr>
+    <tr><td><strong>Output panel</strong></td><td>The bottom area where generated scripts, validation results, test results, and messages appear.</td></tr>
+  </table>
+</section>
+
+<section id="top-buttons">
+  <h2>3. Top toolbar buttons</h2>
+  <p>The top toolbar uses small icon buttons. Hover over each button in the app to see its tooltip.</p>
+  <table>
+    <tr><th>Icon</th><th>Button</th><th>What it does</th><th>Beginner notes</th></tr>
+    <tr><td><span class="icon">🆕</span></td><td>New blank project</td><td>Clears the current graph and starts fresh.</td><td>Save your current graph first if you want to keep it.</td></tr>
+    <tr><td><span class="icon">📂</span></td><td>Open saved graph</td><td>Opens a graph file you saved earlier.</td><td>Use this to continue working on an old script.</td></tr>
+    <tr><td><span class="icon">💾</span></td><td>Save graph</td><td>Saves your current node graph.</td><td>This saves the visual graph, not just the generated script.</td></tr>
+    <tr><td><span class="icon">↶</span></td><td>Undo</td><td>Reverses the last graph edit.</td><td>Shortcut: <span class="kbd">Ctrl</span> + <span class="kbd">Z</span>.</td></tr>
+    <tr><td><span class="icon">↷</span></td><td>Redo</td><td>Restores an edit you undid.</td><td>Shortcut: <span class="kbd">Ctrl</span> + <span class="kbd">Y</span>.</td></tr>
+    <tr><td><span class="icon">♻</span></td><td>Recover autosave</td><td>Loads the last autosaved graph snapshot.</td><td>Useful if the app closes or you make a mistake.</td></tr>
+    <tr><td><span class="icon">🧙</span></td><td>Script Wizard</td><td>Creates a starter graph from a guided wizard.</td><td>Good for beginners who do not know where to start.</td></tr>
+    <tr><td><span class="icon">🧩</span></td><td>Node Database Manager</td><td>Opens the node editor where you can add, edit, delete, export, and import node definitions.</td><td>This changes <span class="inline">NodeLibrary.json</span>.</td></tr>
+    <tr><td><span class="icon">📦</span></td><td>Node Packs</td><td>Manages installable groups of nodes.</td><td>Use node packs to organize extra node collections.</td></tr>
+    <tr><td><span class="icon">⬇</span></td><td>Import Space Engineers API Dump</td><td>Imports a JSON dump from Space Engineers and creates imported nodes.</td><td>Use this after creating a JSON dump with the scanner.</td></tr>
+    <tr><td><span class="icon">🔄</span></td><td>Reload Node Database</td><td>Reloads <span class="inline">NodeLibrary.json</span> without restarting the app.</td><td>Use this after manually editing the JSON file.</td></tr>
+    <tr><td><span class="icon">📡</span></td><td>Create Space Engineers Scanner Script</td><td>Creates or shows the scanner script you paste into a Space Engineers programmable block.</td><td>The scanner helps create ActionId lists and API dump JSON files.</td></tr>
+    <tr><td><span class="icon">❔</span></td><td>Open Beginner Guide</td><td>Opens <span class="inline">ScriptilyxSE_Beginner_User_Guide.html</span>.</td><td>This is the guide you are reading.</td></tr>
+    <tr><td><span class="icon">ⓘ</span></td><td>About</td><td>Shows app information and project links.</td><td>Use it to see app description, author, and links.</td></tr>
+    <tr><td><span class="icon">📤</span></td><td>Export Generated Script</td><td>Saves the generated script to a file.</td><td>Useful when you want a backup copy outside the app.</td></tr>
+    <tr><td><span class="icon">▶</span></td><td>Generate Serious Script</td><td>Generates the Space Engineers programmable block script from your graph.</td><td>This is the main button you use before pasting into Space Engineers.</td></tr>
+  </table>
+</section>
+
+<section id="node-basics">
+  <h2>4. Node basics</h2>
+  <p>A <strong>node</strong> is one step in your script. Examples:</p>
+  <ul>
+    <li><strong>Start</strong> begins the script.</li>
+    <li><strong>Light On</strong> turns a light on.</li>
+    <li><strong>Wait Seconds</strong> pauses before moving to the next node.</li>
+    <li><strong>Set LCD Text</strong> writes text to a screen.</li>
+    <li><strong>Stop Script</strong> ends the script.</li>
+  </ul>
+
+  <h3>Ports</h3>
+  <p>Ports are the connection points on a node.</p>
+  <table>
+    <tr><th>Port type</th><th>Meaning</th><th>Example</th></tr>
+    <tr><td><strong>Input port</strong></td><td>Where the script enters the node.</td><td><span class="inline">In</span></td></tr>
+    <tr><td><strong>Output port</strong></td><td>Where the script leaves the node.</td><td><span class="inline">Next</span>, <span class="inline">True</span>, <span class="inline">False</span>, <span class="inline">Loop</span>, <span class="inline">Done</span></td></tr>
+  </table>
+
+  <div class="callout info">
+    <strong>Connection rule:</strong> One output should only go to one place. One input can accept multiple incoming connections, so several branches can merge into one Wait node or Stop Script node.
+  </div>
+</section>
+
+<section id="create-first-script">
+  <h2>5. Create your first script</h2>
+  <p>This example turns on a light, waits 3 seconds, turns it off, writes a message to an LCD, then stops.</p>
+
+  <h3>Space Engineers setup</h3>
+  <ol>
+    <li>Place a programmable block.</li>
+    <li>Place an interior light and rename it <span class="inline">Test Light</span>.</li>
+    <li>Place an LCD or text panel and rename it <span class="inline">Test LCD</span>.</li>
+  </ol>
+
+  <h3>Nodes to add</h3>
+  <pre>Start
+Light On
+Wait Seconds
+Light Off
+Set LCD Text
+Stop Script</pre>
+
+  <h3>Set the node properties</h3>
+  <table>
+    <tr><th>Node</th><th>Property</th><th>Value</th></tr>
+    <tr><td>Light On</td><td>BlockName</td><td>Test Light</td></tr>
+    <tr><td>Wait Seconds</td><td>Seconds</td><td>3</td></tr>
+    <tr><td>Light Off</td><td>BlockName</td><td>Test Light</td></tr>
+    <tr><td>Set LCD Text</td><td>BlockName</td><td>Test LCD</td></tr>
+    <tr><td>Set LCD Text</td><td>Text</td><td>Light test complete.</td></tr>
+  </table>
+
+  <h3>Connect the nodes</h3>
+  <pre>Start.Next
+→ Light On.In
+
+Light On.Next
+→ Wait Seconds.In
+
+Wait Seconds.Next
+→ Light Off.In
+
+Light Off.Next
+→ Set LCD Text.In
+
+Set LCD Text.Next
+→ Stop Script.In</pre>
+
+  <div class="callout success">
+    <strong>Expected result:</strong> The light turns on, waits 3 seconds, turns off, the LCD says “Light test complete,” and the script stops.
+  </div>
+</section>
+
+<section id="connect-nodes">
+  <h2>6. Connecting nodes</h2>
+  <div class="step"><div class="stepnum">1</div><div>Select the first node or start dragging from its output port.</div></div>
+  <div class="step"><div class="stepnum">2</div><div>Connect the output port to the next node’s input port.</div></div>
+  <div class="step"><div class="stepnum">3</div><div>Use the Properties panel to make sure each node has the correct block names and values.</div></div>
+  <div class="step"><div class="stepnum">4</div><div>Use <strong>Check</strong>, <strong>Test Graph</strong>, or <strong>Advanced Validate</strong> before generating.</div></div>
+
+  <h3>Branching example</h3>
+  <p>Some nodes have more than one output. For example, <strong>If Text Equals</strong> has <span class="inline">True</span> and <span class="inline">False</span>.</p>
+  <pre>If Text Equals.True
+→ Set LCD Text "MATCHED"
+
+If Text Equals.False
+→ Set LCD Text "FAILED"</pre>
+</section>
+
+<section id="generate-script">
+  <h2>7. Generate and use the script</h2>
+  <ol>
+    <li>Build your graph.</li>
+    <li>Click <strong>Check</strong> or <strong>Advanced Validate</strong>.</li>
+    <li>Click the top <strong>▶ Generate Serious Script</strong> button.</li>
+    <li>Review the generated script in the output panel.</li>
+    <li>Click <strong>Copy</strong> or <strong>Export Generated Script</strong>.</li>
+    <li>Open Space Engineers.</li>
+    <li>Open your programmable block.</li>
+    <li>Paste the generated script.</li>
+    <li>Click <strong>Check Code</strong>.</li>
+    <li>Click <strong>Remember & Exit</strong>.</li>
+    <li>Run the programmable block.</li>
+  </ol>
+
+  <div class="callout warn">
+    <strong>Important:</strong> The block names in the node properties must match the real Space Engineers block names exactly. If the node says <span class="inline">Test Light</span>, the block in Space Engineers must also be named <span class="inline">Test Light</span>.
+  </div>
+</section>
+
+<section id="bottom-buttons">
+  <h2>8. Bottom test/output buttons</h2>
+  <table>
+    <tr><th>Button</th><th>What it does</th><th>When to use it</th></tr>
+    <tr><td>Clear Connections</td><td>Clears graph connections.</td><td>Use when you want to reconnect the graph from scratch.</td></tr>
+    <tr><td>Clear One Connection</td><td>Removes one selected connection.</td><td>Use when one line is wrong.</td></tr>
+    <tr><td>Delete Selected</td><td>Deletes the selected graph node or item.</td><td>Use carefully. Save first if needed.</td></tr>
+    <tr><td>Zoom -</td><td>Zooms out on the graph.</td><td>Use on large graphs.</td></tr>
+    <tr><td>100%</td><td>Resets graph zoom.</td><td>Use when the graph view gets too small or too large.</td></tr>
+    <tr><td>Zoom +</td><td>Zooms in on the graph.</td><td>Use when you need to see small nodes better.</td></tr>
+    <tr><td>Check</td><td>Checks the graph for common problems.</td><td>Use before generating.</td></tr>
+    <tr><td>Test Graph</td><td>Runs a graph test/dry run in the app.</td><td>Use to understand the route your graph takes.</td></tr>
+    <tr><td>Advanced Validate</td><td>Runs deeper validation checks.</td><td>Use when testing advanced nodes or complex graphs.</td></tr>
+    <tr><td>Reachable Nodes</td><td>Shows which nodes can be reached from Start.</td><td>Use if some nodes are not running.</td></tr>
+    <tr><td>Generated Actions</td><td>Shows generated actions from the graph.</td><td>Use to preview what the script will try to do.</td></tr>
+    <tr><td>Selected Code</td><td>Shows generated code for the selected node.</td><td>Use when testing one node that may not work.</td></tr>
+    <tr><td>Clear Output</td><td>Clears the output panel.</td><td>Use to remove old messages.</td></tr>
+    <tr><td>Copy</td><td>Copies the generated script or output text.</td><td>Use after generating a script.</td></tr>
+  </table>
+</section>
+
+<section id="node-database">
+  <h2>9. Node Database Manager</h2>
+  <p>The <strong>Node Database Manager</strong> edits the app’s node library. This is where nodes are stored before you add them to the graph.</p>
+
+  <h3>What the Node Database Manager can do</h3>
+  <ul>
+    <li>Add new node definitions.</li>
+    <li>Edit node titles, descriptions, categories, ports, properties, previews, and ActionTypes.</li>
+    <li>Delete nodes.</li>
+    <li>Export selected nodes to JSON as backups.</li>
+    <li>Import node JSON files back into the database.</li>
+    <li>Duplicate selected nodes.</li>
+  </ul>
+
+  <h3>ActionType vs ActionId vs PropertyId</h3>
+  <table>
+    <tr><th>Name</th><th>What it means</th><th>Example</th></tr>
+    <tr><td><strong>ActionType</strong></td><td>The generator behavior inside Scriptilyx SE.</td><td><span class="inline">SetBlockEnabled</span>, <span class="inline">ApplyTerminalAction</span></td></tr>
+    <tr><td><strong>ActionId</strong></td><td>A Space Engineers terminal action ID used by <strong>Apply Any Terminal Action</strong>.</td><td><span class="inline">OnOff_On</span>, <span class="inline">TriggerNow</span></td></tr>
+    <tr><td><strong>PropertyId</strong></td><td>A Space Engineers terminal property ID used by generic property nodes.</td><td><span class="inline">OnOff</span>, <span class="inline">Radius</span>, <span class="inline">FontSize</span></td></tr>
+  </table>
+
+  <div class="callout warn">
+    <strong>Beginner warning:</strong> If you create a brand-new ActionType that the generator does not know, the generated script may say <span class="inline">Unsupported ActionType</span>. Use existing ActionTypes when possible.
+  </div>
+
+  <h3>ActionTypes that do not usually need generator updates</h3>
+  <pre>ApplyTerminalAction
+SetTerminalBool
+SetTerminalFloat
+SetTerminalInt
+SetTerminalString
+SetBlockEnabled
+SetGroupEnabled</pre>
+</section>
+
+<section id="bulk-tools">
+  <h2>10. Bulk node tools</h2>
+  <p>The Node Database Manager supports selecting more than one node at a time.</p>
+  <table>
+    <tr><th>Action</th><th>How to do it</th></tr>
+    <tr><td>Select multiple individual nodes</td><td>Hold <span class="kbd">Ctrl</span> and click each node.</td></tr>
+    <tr><td>Select a range</td><td>Click the first node, hold <span class="kbd">Shift</span>, then click the last node.</td></tr>
+    <tr><td>Delete selected nodes</td><td>Select nodes, then click <strong>Delete Selected</strong>. The updated version saves the deletion to <span class="inline">NodeLibrary.json</span>.</td></tr>
+    <tr><td>Export selected nodes</td><td>Select nodes, then click <strong>Export Selected JSON</strong>. Save the backup file somewhere safe.</td></tr>
+    <tr><td>Import nodes JSON</td><td>Click <strong>Import Nodes JSON</strong> and select a previously exported node JSON file.</td></tr>
+    <tr><td>Duplicate selected nodes</td><td>Select nodes and click <strong>Duplicate Selected</strong>.</td></tr>
+  </table>
+
+  <div class="callout success">
+    <strong>Safe workflow:</strong> Export selected nodes first, then delete them. That way you can import them again later if you change your mind.
+  </div>
+</section>
+
+<section id="api-dump">
+  <h2>11. Space Engineers API dump import</h2>
+  <p>The <strong>Import Space Engineers API Dump</strong> button imports a JSON file made from Space Engineers. It can create imported nodes from block actions and properties.</p>
+
+  <h3>What the API dump contains</h3>
+  <pre>{
+  "Blocks": [
+    {
+      "TypeName": "MyBatteryBlock",
+      "DisplayName": "Battery",
+      "CustomName": "Battery",
+      "Actions": [
+        { "Id": "OnOff_On", "Name": "Toggle block On" }
+      ],
+      "Properties": [
+        { "Id": "OnOff", "TypeName": "Boolean" }
+      ]
+    }
+  ]
+}</pre>
+
+  <h3>What happens when you import it</h3>
+  <table>
+    <tr><th>Dump item</th><th>Imported node uses</th><th>Generator support</th></tr>
+    <tr><td>Actions</td><td><span class="inline">ApplyTerminalAction</span></td><td>Supported</td></tr>
+    <tr><td>Boolean properties</td><td><span class="inline">SetTerminalBool</span></td><td>Supported</td></tr>
+    <tr><td>Single / float properties</td><td><span class="inline">SetTerminalFloat</span></td><td>Supported</td></tr>
+    <tr><td>String / StringBuilder properties</td><td><span class="inline">SetTerminalString</span></td><td>Supported</td></tr>
+    <tr><td>Int / Int64 properties</td><td><span class="inline">SetTerminalInt</span></td><td>Supported when the property accepts it</td></tr>
+    <tr><td>Color properties</td><td>May be skipped or need custom support</td><td>Not generally supported by the current generic nodes</td></tr>
+  </table>
+
+  <div class="callout info">
+    <strong>Does the generator need an update?</strong> Usually no, as long as the imported nodes use the generic ActionTypes above. The generator only needs updates for brand-new special logic nodes that cannot be done with generic terminal actions or properties.
+  </div>
+</section>
+
+<section id="generic-nodes">
+  <h2>12. Generic terminal nodes</h2>
+  <p>Generic terminal nodes let you control Space Engineers block actions and properties without needing a custom node for every single block.</p>
+
+  <table>
+    <tr><th>Node</th><th>Uses</th><th>Example</th></tr>
+    <tr><td>Apply Any Terminal Action</td><td><span class="inline">ActionId</span></td><td>BlockName = Test Light, ActionId = OnOff_On</td></tr>
+    <tr><td>Set Any Bool Property</td><td><span class="inline">PropertyId</span> with true/false</td><td>PropertyId = OnOff, Value = true</td></tr>
+    <tr><td>Set Any Float Property</td><td><span class="inline">PropertyId</span> with number</td><td>PropertyId = Radius, Value = 10</td></tr>
+    <tr><td>Set Any Int Property</td><td><span class="inline">PropertyId</span> with whole number</td><td>PropertyId = ChargeMode, Value = 1</td></tr>
+    <tr><td>Set Any Text Property</td><td><span class="inline">PropertyId</span> with text</td><td>PropertyId = Name, Value = New Name</td></tr>
+  </table>
+
+  <h3>Beginner testing order</h3>
+  <ol>
+    <li>Test <strong>Apply Any Terminal Action</strong> with a light and <span class="inline">OnOff_On</span>.</li>
+    <li>Test <strong>Set Any Bool Property</strong> with a light and <span class="inline">OnOff</span>.</li>
+    <li>Test <strong>Set Any Float Property</strong> with a light and <span class="inline">Radius</span>.</li>
+    <li>Test <strong>Set Any Text Property</strong> on a block you do not mind renaming.</li>
+    <li>Test <strong>Set Any Int Property</strong> only when you have a real int property from the dump.</li>
+  </ol>
+</section>
+
+<section id="scanner-instructions">
+  <h2>13. Scanner instructions</h2>
+  <p>The app can create a Space Engineers scanner script. The scanner is used to get exact <strong>ActionId</strong> and <strong>PropertyId</strong> values from your actual Space Engineers world.</p>
+
+  <div class="callout warn">
+    <strong>This guide does not include the API dump script code.</strong> Use the app’s <strong>📡 Create Space Engineers Scanner Script</strong> button to get the scanner script, or use the separate <span class="inline">SpaceEngineersApiDumpScanner.cs</span> file if you have it.
+  </div>
+
+  <h3>How to create an importable API dump JSON</h3>
+  <ol>
+    <li>Click <strong>📡 Create Space Engineers Scanner Script</strong> in Scriptilyx SE.</li>
+    <li>Copy the scanner script.</li>
+    <li>Open Space Engineers.</li>
+    <li>Place or open a programmable block.</li>
+    <li>Paste the scanner script into the programmable block.</li>
+    <li>Click <strong>Check Code</strong>.</li>
+    <li>Click <strong>Remember & Exit</strong>.</li>
+    <li>Run the programmable block.</li>
+    <li>Open the programmable block’s <strong>Custom Data</strong>.</li>
+    <li>Press <span class="kbd">Ctrl</span> + <span class="kbd">A</span>, then <span class="kbd">Ctrl</span> + <span class="kbd">C</span>.</li>
+    <li>Paste into Notepad.</li>
+    <li>Save it as <span class="inline">SpaceEngineers_API_Dump.json</span>.</li>
+    <li>Go back to Scriptilyx SE.</li>
+    <li>Click <strong>⬇ Import Space Engineers API Dump</strong>.</li>
+    <li>Select <span class="inline">SpaceEngineers_API_Dump.json</span>.</li>
+  </ol>
+
+  <h3>Recommended scanner arguments</h3>
+  <table>
+    <tr><th>Argument</th><th>Use it for</th></tr>
+    <tr><td><span class="inline">unique</span></td><td>One example per block API type. Best for a clean import.</td></tr>
+    <tr><td><span class="inline">filter Light</span></td><td>Only light-related blocks.</td></tr>
+    <tr><td><span class="inline">filter Timer</span></td><td>Only timer-related blocks.</td></tr>
+    <tr><td><span class="inline">filter Rotor</span></td><td>Only rotor-related blocks.</td></tr>
+    <tr><td><span class="inline">allblocks</span></td><td>Every visible block. This can be very large.</td></tr>
+  </table>
+</section>
+
+<section id="variables">
+  <h2>14. Variables</h2>
+  <p>Variables let your script remember values while it runs.</p>
+
+  <h3>Number variables</h3>
+  <table>
+    <tr><th>Node</th><th>What it does</th></tr>
+    <tr><td>Set Number Variable</td><td>Creates or resets a number.</td></tr>
+    <tr><td>Add Number Variable</td><td>Adds to an existing number.</td></tr>
+    <tr><td>If Number Less Than</td><td>Branches based on whether a number is less than a value.</td></tr>
+    <tr><td>If Number Greater Than</td><td>Branches based on whether a number is greater than a value.</td></tr>
+  </table>
+
+  <h3>Text variables</h3>
+  <table>
+    <tr><th>Node</th><th>What it does</th></tr>
+    <tr><td>Set Text Variable</td><td>Stores text in a named variable.</td></tr>
+    <tr><td>If Text Equals</td><td>Branches based on whether a text variable equals a value.</td></tr>
+  </table>
+
+  <h3>Text variable test</h3>
+  <pre>Start
+→ Set Text Variable
+   Name = mode
+   Value = ready
+→ If Text Equals
+   Name = mode
+   Value = ready
+   True → Set LCD Text "TEXT VARIABLE MATCHED"
+   False → Set LCD Text "TEXT VARIABLE FAILED"</pre>
+</section>
+
+<section id="sections">
+  <h2>15. Sections and subroutines</h2>
+  <p>Sections let you create reusable chunks of graph logic.</p>
+
+  <table>
+    <tr><th>Node</th><th>Purpose</th></tr>
+    <tr><td>Start Section</td><td>Marks the beginning of a reusable section.</td></tr>
+    <tr><td>Call Section</td><td>Runs a named section and returns back when done.</td></tr>
+    <tr><td>Return</td><td>Ends the section and returns to <span class="inline">Call Section.Next</span>.</td></tr>
+  </table>
+
+  <h3>Correct pattern</h3>
+  <pre>Main graph:
+Start
+→ Call Section
+   SectionName = TestSection
+→ Set LCD Text "RETURNED FROM SECTION"
+→ Stop Script
+
+Section graph:
+Start Section
+  SectionName = TestSection
+→ Set LCD Text "SECTION RAN"
+→ Wait Seconds
+→ Return</pre>
+
+  <div class="callout info">
+    <strong>Remember:</strong> The <strong>Return</strong> node goes back to whatever is connected to <strong>Call Section.Next</strong>.
+  </div>
+</section>
+
+<section id="buttons-arguments">
+  <h2>16. Button commands</h2>
+  <p>Button Command nodes let a Space Engineers button panel choose which script path to run.</p>
+
+  <h3>Space Engineers setup</h3>
+  <ol>
+    <li>Place a button panel.</li>
+    <li>Set a button action to <strong>Run Programmable Block</strong>.</li>
+    <li>Set the argument to something like <span class="inline">button_1</span>.</li>
+  </ol>
+
+  <h3>Graph pattern</h3>
+  <pre>Start
+→ Button Command
+   Argument = button_1
+   True → actions to run
+   False → Stop Script</pre>
+
+  <div class="callout warn">
+    The argument is case-insensitive in the generated script, but spelling still matters. <span class="inline">button_1</span> is not the same command as <span class="inline">button1</span>.
+  </div>
+</section>
+
+<section id="repeat-router">
+  <h2>17. Repeat and router nodes</h2>
+  <h3>Repeat Times</h3>
+  <p><strong>Repeat Times</strong> loops a path a fixed number of times.</p>
+  <pre>Repeat Times.In starts the loop.
+Repeat Times.Loop runs each loop.
+Repeat Times.Repeat is where the loop path returns.
+Repeat Times.Done runs after all loops are complete.</pre>
+
+  <h3>Number Greater Router</h3>
+  <p><strong>Number Greater Router</strong> checks a number variable and sends the script to one output based on how high the number is.</p>
+  <pre>count > 6 → Greater6
+count > 5 → Greater5
+count > 4 → Greater4
+count > 3 → Greater3
+count > 2 → Greater2
+otherwise → Else</pre>
+
+  <div class="callout info">
+    For a light progress test that starts at count = 0 and adds 1 each loop, use <strong>Repeat Times = 7</strong> if you want Greater6 to trigger.
+  </div>
+</section>
+
+<section id="timers">
+  <h2>18. Timer nodes</h2>
+  <table>
+    <tr><th>Node</th><th>What it does</th></tr>
+    <tr><td>Timer Trigger</td><td>Triggers the timer block immediately.</td></tr>
+    <tr><td>Timer Start Countdown</td><td>Starts the timer block countdown.</td></tr>
+    <tr><td>Timer Stop Countdown</td><td>Stops the timer block countdown.</td></tr>
+  </table>
+
+  <h3>Timer test graph</h3>
+  <pre>Start
+→ Timer Start Countdown
+   BlockName = Timer Block
+→ Wait Seconds
+   Seconds = 3
+→ Timer Stop Countdown
+   BlockName = Timer Block
+→ Timer Trigger
+   BlockName = Timer Block
+→ Stop Script</pre>
+</section>
+
+<section id="mechanical">
+  <h2>19. Pistons and rotors</h2>
+  <h3>Pistons</h3>
+  <table>
+    <tr><th>Node</th><th>Common value</th></tr>
+    <tr><td>Piston Extend</td><td>Velocity = 1</td></tr>
+    <tr><td>Piston Retract</td><td>Velocity = -1</td></tr>
+    <tr><td>Piston Stop</td><td>Velocity = 0</td></tr>
+  </table>
+
+  <h3>Rotors and hinges</h3>
+  <p><strong>Rotor Set Velocity</strong> uses RPM.</p>
+  <pre>BlockName = Rotor
+VelocityRPM = 5</pre>
+  <p>Use a negative number to spin the other direction:</p>
+  <pre>VelocityRPM = -5</pre>
+</section>
+
+<section id="examples">
+  <h2>20. Beginner examples</h2>
+
+  <h3>Example A: Turn light on from a button</h3>
+  <pre>Start
+→ Button Command
+   Argument = button_1
+   True → Light On
+            BlockName = Test Light
+         → Set LCD Text
+            Text = Button 1 ran.
+         → Stop Script
+   False → Stop Script</pre>
+
+  <h3>Example B: Run a section from a button</h3>
+  <pre>Main:
+Start
+→ Button Command
+   Argument = button_1
+   True → Call Section
+            SectionName = StartupSection
+         → Set LCD Text "Returned from section"
+         → Stop Script
+   False → Stop Script
+
+Section:
+Start Section
+  SectionName = StartupSection
+→ Set LCD Text "Section ran"
+→ Return</pre>
+
+  <h3>Example C: Generic terminal action</h3>
+  <pre>Start
+→ Apply Any Terminal Action
+   BlockName = Test Light
+   ActionId = OnOff_On
+→ Stop Script</pre>
+</section>
+
+<section id="troubleshooting">
+  <h2>21. Troubleshooting</h2>
+  <table>
+    <tr><th>Problem</th><th>Likely cause</th><th>Fix</th></tr>
+    <tr><td>Script says missing block</td><td>The block name in the node does not match Space Engineers.</td><td>Rename the block or update the node’s BlockName.</td></tr>
+    <tr><td>Unsupported ActionType</td><td>The generator does not know that ActionType.</td><td>Use a supported generic ActionType or update the generator.</td></tr>
+    <tr><td>Button Command does nothing</td><td>The programmable block argument does not match.</td><td>Check the button panel argument.</td></tr>
+    <tr><td>Section runs but does not return</td><td>Call Section.Next is not connected, or Return is missing.</td><td>Connect Call Section.Next to the node that should run after the section.</td></tr>
+    <tr><td>Only some nodes run</td><td>The nodes may not be reachable from Start.</td><td>Click Reachable Nodes.</td></tr>
+    <tr><td>Imported nodes do not work</td><td>BlockName may be using a display name instead of the exact custom block name.</td><td>Change BlockName to match the real block name in Space Engineers.</td></tr>
+    <tr><td>Generic property does not work</td><td>Wrong PropertyId or wrong value type.</td><td>Use the scanner/API dump to find the exact PropertyId and TypeName.</td></tr>
+  </table>
+</section>
+
+<section id="node-reference">
+  <h2>22. Node reference</h2>
+  <p>This is a beginner-friendly list of the main built-in node groups.</p>
+
+  <div class="grid">
+    <div class="card"><h4>🧠 Logic</h4><p>Start, If Argument Equals, Run Every Seconds, Echo Message, Set Runtime Update, Note, Custom Code, Wait Seconds, Command Router, Stop Script, Repeat Times, Number Greater Router.</p></div>
+    <div class="card"><h4>🔢 Variables</h4><p>Set Number Variable, Add Number Variable, Set Text Variable, If Number Less Than, If Number Greater Than, If Text Equals.</p></div>
+    <div class="card"><h4>🧩 All Blocks / Generic</h4><p>Set Any Bool Property, Set Any Float Property, Set Any Text Property, Set Any Int Property, Apply Any Terminal Action.</p></div>
+    <div class="card"><h4>🔲 Blocks / Groups</h4><p>Turn On Block, Turn Off Block, Group On, Group Off.</p></div>
+    <div class="card"><h4>✅ Checks</h4><p>Battery Below %, Cargo Percent Below.</p></div>
+    <div class="card"><h4>🚪 Doors / Lights / LCD / Connectors</h4><p>Door Open, Door Close, Open Door Group, Close Door Group, Light On, Light Off, Set Light Color, Set LCD Text, Set LCD Group Text, Connector Lock, Connector Unlock.</p></div>
+    <div class="card"><h4>🚀 Flight / Thrusters / Gyros</h4><p>Thruster On, Thruster Off, Thruster Override %, Gyro Override On, Gyro Override Off, Gyro Yaw Pitch Roll.</p></div>
+    <div class="card"><h4>⚙ Mechanical</h4><p>Piston Extend, Piston Retract, Piston Stop, Rotor Set Velocity.</p></div>
+    <div class="card"><h4>⚡ Power / Air / Utility</h4><p>Timer Trigger, Timer Start Countdown, Timer Stop Countdown, Sound Play, Sound Stop, Gas Tank Stockpile On, Gas Tank Stockpile Off, Air Vent Depressurize On, Air Vent Depressurize Off.</p></div>
+    <div class="card"><h4>🏭 Production / Tools</h4><p>Drill On, Drill Off, Welder On, Welder Off, Grinder On, Grinder Off, Assembler On, Assembler Off, Refinery On, Refinery Off.</p></div>
+    <div class="card"><h4>🔘 Buttons / Arguments</h4><p>Button Command, Button Command: startup, Button Command: dock, Button Command: mine.</p></div>
+    <div class="card"><h4>📦 Sections / Subroutines</h4><p>Start Section, Call Section, Return.</p></div>
+  </div>
+</section>
+
+<section id="workflow">
+  <h2>23. Recommended workflow</h2>
+  <ol>
+    <li>Start with a small graph.</li>
+    <li>Use simple block names in Space Engineers, like <span class="inline">Test Light</span> or <span class="inline">Test LCD</span>.</li>
+    <li>Add one or two nodes at a time.</li>
+    <li>Use <strong>Check</strong> and <strong>Test Graph</strong>.</li>
+    <li>Generate the script.</li>
+    <li>Paste it into Space Engineers and test it.</li>
+    <li>If it works, save the graph.</li>
+    <li>Then add more nodes.</li>
+  </ol>
+
+  <div class="callout success">
+    <strong>Best beginner rule:</strong> Build small, test often, then expand.
+  </div>
+</section>
+</main>
+</div>
+
+<div class="footer">
+  Scriptilyx SE · Visual script builder for Space Engineers programmable block scripts · Parallel Infinite Worlds Company
+</div>
+</body>
+</html>

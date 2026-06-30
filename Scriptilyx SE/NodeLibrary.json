@@ -1,0 +1,2128 @@
+{
+  "Nodes": [
+    {
+      "Id": "logic.start",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Start",
+      "Description": "Start of the script graph.",
+      "Search": "start begin",
+      "ActionType": "Start",
+      "InputPorts": [],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {},
+      "Preview": "Script starts here"
+    },
+    {
+      "Id": "logic.if_argument_equals",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "If Argument Equals",
+      "Description": "Checks the programmable block argument.",
+      "Search": "if argument equals command",
+      "ActionType": "IfArgumentEquals",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Argument": {
+          "Type": "text",
+          "DefaultValue": "start",
+          "Options": []
+        }
+      },
+      "Preview": "argument == \u0022{Argument}\u0022"
+    },
+    {
+      "Id": "logic.run_every_seconds",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Run Every Seconds",
+      "Description": "Only continues on the True branch every selected number of seconds.",
+      "Search": "wait delay timer every seconds",
+      "ActionType": "RunEverySeconds",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Seconds": {
+          "Type": "number",
+          "DefaultValue": "5",
+          "Options": []
+        }
+      },
+      "Preview": "Run every {Seconds} seconds"
+    },
+    {
+      "Id": "logic.echo",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Echo Message",
+      "Description": "Prints a message to the programmable block detail screen.",
+      "Search": "echo message print debug",
+      "ActionType": "Echo",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Text": {
+          "Type": "text",
+          "DefaultValue": "Message",
+          "Options": []
+        }
+      },
+      "Preview": "Echo \u0022{Text}\u0022"
+    },
+    {
+      "Id": "logic.set_runtime_update",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Set Runtime Update",
+      "Description": "Controls how often the programmable block runs itself.",
+      "Search": "runtime update frequency loop",
+      "ActionType": "SetRuntimeUpdate",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Frequency": {
+          "Type": "combo",
+          "DefaultValue": "Update10",
+          "Options": [
+            "None",
+            "Update1",
+            "Update10",
+            "Update100"
+          ]
+        }
+      },
+      "Preview": "Runtime update = {Frequency}"
+    },
+    {
+      "Id": "logic.note",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Note",
+      "Description": "Adds a comment/note to the graph and generated script.",
+      "Search": "note comment sticky",
+      "ActionType": "Note",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Text": {
+          "Type": "multiline",
+          "DefaultValue": "Write your note here.",
+          "Options": []
+        }
+      },
+      "Preview": "{Text}"
+    },
+    {
+      "Id": "logic.custom_code",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Custom Code",
+      "Description": "Adds raw C# code into the generated script.",
+      "Search": "custom code raw csharp",
+      "ActionType": "CustomCode",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Code": {
+          "Type": "multiline",
+          "DefaultValue": "// custom code here",
+          "Options": []
+        }
+      },
+      "Preview": "Raw C#"
+    },
+    {
+      "Id": "var.set_number",
+      "Category": "\uD83D\uDD22 Variables",
+      "Title": "Set Number Variable",
+      "Description": "Creates or updates a number variable.",
+      "Search": "variable number set",
+      "ActionType": "SetNumberVariable",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "myNumber",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "{Name} = {Value}"
+    },
+    {
+      "Id": "var.add_number",
+      "Category": "\uD83D\uDD22 Variables",
+      "Title": "Add Number Variable",
+      "Description": "Adds a number to an existing number variable.",
+      "Search": "variable number add math",
+      "ActionType": "AddNumberVariable",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "myNumber",
+          "Options": []
+        },
+        "AddValue": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "{Name} \u002B= {AddValue}"
+    },
+    {
+      "Id": "var.set_text",
+      "Category": "\uD83D\uDD22 Variables",
+      "Title": "Set Text Variable",
+      "Description": "Creates or updates a text variable.",
+      "Search": "variable text string set",
+      "ActionType": "SetTextVariable",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "myText",
+          "Options": []
+        },
+        "Value": {
+          "Type": "text",
+          "DefaultValue": "hello",
+          "Options": []
+        }
+      },
+      "Preview": "{Name} = \u0022{Value}\u0022"
+    },
+    {
+      "Id": "var.if_number_less",
+      "Category": "\uD83D\uDD22 Variables",
+      "Title": "If Number Less Than",
+      "Description": "Checks if a number variable is less than a value.",
+      "Search": "if number less than variable compare",
+      "ActionType": "IfNumberLessThan",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "myNumber",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "10",
+          "Options": []
+        }
+      },
+      "Preview": "{Name} \u003C {Value}"
+    },
+    {
+      "Id": "var.if_number_greater",
+      "Category": "\uD83D\uDD22 Variables",
+      "Title": "If Number Greater Than",
+      "Description": "Checks if a number variable is greater than a value.",
+      "Search": "if number greater than variable compare",
+      "ActionType": "IfNumberGreaterThan",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "myNumber",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "10",
+          "Options": []
+        }
+      },
+      "Preview": "{Name} \u003E {Value}"
+    },
+    {
+      "Id": "var.if_text_equals",
+      "Category": "\uD83D\uDD22 Variables",
+      "Title": "If Text Equals",
+      "Description": "Checks if a text variable equals a value.",
+      "Search": "if text equals variable compare",
+      "ActionType": "IfTextEquals",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "myText",
+          "Options": []
+        },
+        "Value": {
+          "Type": "text",
+          "DefaultValue": "hello",
+          "Options": []
+        }
+      },
+      "Preview": "{Name} == \u0022{Value}\u0022"
+    },
+    {
+      "Id": "generic.set_bool_property",
+      "Category": "\uD83E\uDDE9 All Blocks / Generic",
+      "Title": "Set Any Bool Property",
+      "Description": "Sets any terminal bool property by block name and property ID.",
+      "Search": "generic any block property bool terminal every block",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "OnOff",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "{BlockName}.{PropertyId} = {Value}"
+    },
+    {
+      "Id": "generic.set_float_property",
+      "Category": "\uD83E\uDDE9 All Blocks / Generic",
+      "Title": "Set Any Float Property",
+      "Description": "Sets any terminal float property by block name and property ID.",
+      "Search": "generic any block property float terminal every block slider",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Value",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName}.{PropertyId} = {Value}"
+    },
+    {
+      "Id": "generic.set_string_property",
+      "Category": "\uD83E\uDDE9 All Blocks / Generic",
+      "Title": "Set Any Text Property",
+      "Description": "Sets any terminal string property by block name and property ID.",
+      "Search": "generic any block property text string terminal every block",
+      "ActionType": "SetTerminalString",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Name",
+          "Options": []
+        },
+        "Value": {
+          "Type": "text",
+          "DefaultValue": "Text Here",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName}.{PropertyId} = \u0022{Value}\u0022"
+    },
+    {
+      "Id": "generic.set_int_property",
+      "Category": "\uD83E\uDDE9 All Blocks / Generic",
+      "Title": "Set Any Int Property",
+      "Description": "Sets any terminal integer property by block name and property ID.",
+      "Search": "generic any block property int integer terminal every block",
+      "ActionType": "SetTerminalInt",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Value",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName}.{PropertyId} = {Value}"
+    },
+    {
+      "Id": "generic.apply_action",
+      "Category": "\uD83E\uDDE9 All Blocks / Generic",
+      "Title": "Apply Any Terminal Action",
+      "Description": "Runs any terminal action by block name and action ID.",
+      "Search": "generic any block action apply terminal every block",
+      "ActionType": "ApplyTerminalAction",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "ActionId": {
+          "Type": "text",
+          "DefaultValue": "OnOff_On",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName}.ApplyAction({ActionId})"
+    },
+    {
+      "Id": "block.turn_on",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Turn On Block",
+      "Description": "Turns on a functional block by exact name.",
+      "Search": "block on enable functional",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "{BlockName} enabled = {Enabled}"
+    },
+    {
+      "Id": "block.turn_off",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Turn Off Block",
+      "Description": "Turns off a functional block by exact name.",
+      "Search": "block off disable functional",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Block Name Here",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "{BlockName} enabled = {Enabled}"
+    },
+    {
+      "Id": "block.group_on",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Group On",
+      "Description": "Turns on all functional blocks in a named group.",
+      "Search": "group on enable",
+      "ActionType": "SetGroupEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "Ship Systems",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Group {GroupName} enabled = true"
+    },
+    {
+      "Id": "block.group_off",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Group Off",
+      "Description": "Turns off all functional blocks in a named group.",
+      "Search": "group off disable",
+      "ActionType": "SetGroupEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "Ship Systems",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Group {GroupName} enabled = false"
+    },
+    {
+      "Id": "check.battery_below",
+      "Category": "\u2705 Checks",
+      "Title": "Battery Below %",
+      "Description": "Checks if a battery is below a percentage.",
+      "Search": "battery below percent power",
+      "ActionType": "BatteryBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Battery",
+          "Options": []
+        },
+        "Percent": {
+          "Type": "number",
+          "DefaultValue": "20",
+          "Options": []
+        }
+      },
+      "Preview": "Battery {BlockName} below {Percent}%"
+    },
+    {
+      "Id": "check.cargo_below",
+      "Category": "\u2705 Checks",
+      "Title": "Cargo Percent Below",
+      "Description": "Checks if cargo is below a percentage.",
+      "Search": "cargo inventory below percent",
+      "ActionType": "CargoPercentBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Cargo Container",
+          "Options": []
+        },
+        "Percent": {
+          "Type": "number",
+          "DefaultValue": "90",
+          "Options": []
+        }
+      },
+      "Preview": "Cargo {BlockName} below {Percent}%"
+    },
+    {
+      "Id": "block.door_open",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Door Open",
+      "Description": "Opens one door by block name.",
+      "Search": "door open",
+      "ActionType": "OpenDoor",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Door",
+          "Options": []
+        }
+      },
+      "Preview": "Open door {BlockName}"
+    },
+    {
+      "Id": "block.door_close",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Door Close",
+      "Description": "Closes one door by block name.",
+      "Search": "door close",
+      "ActionType": "CloseDoor",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Door",
+          "Options": []
+        }
+      },
+      "Preview": "Close door {BlockName}"
+    },
+    {
+      "Id": "block.door_group_open",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Open Door Group",
+      "Description": "Opens every door in a group.",
+      "Search": "door group open",
+      "ActionType": "OpenDoorGroup",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "Door Group",
+          "Options": []
+        }
+      },
+      "Preview": "Open door group {GroupName}"
+    },
+    {
+      "Id": "block.door_group_close",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Close Door Group",
+      "Description": "Closes every door in a group.",
+      "Search": "door group close",
+      "ActionType": "CloseDoorGroup",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "Door Group",
+          "Options": []
+        }
+      },
+      "Preview": "Close door group {GroupName}"
+    },
+    {
+      "Id": "block.light_on",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Light On",
+      "Description": "Turns a light block on.",
+      "Search": "light lamp spotlight on",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Emergency Light",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Light {BlockName} on"
+    },
+    {
+      "Id": "block.light_off",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Light Off",
+      "Description": "Turns a light block off.",
+      "Search": "light lamp spotlight off",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Emergency Light",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Light {BlockName} off"
+    },
+    {
+      "Id": "block.light_color",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Set Light Color",
+      "Description": "Changes the color of a light, spotlight, interior light, or other lighting block.",
+      "Search": "light color colour rgb red green blue lamp spotlight interior",
+      "ActionType": "SetLightColor",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Light",
+          "Options": []
+        },
+        "Red": {
+          "Type": "number",
+          "DefaultValue": "255",
+          "Options": []
+        },
+        "Green": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        },
+        "Blue": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} color to RGB({Red}, {Green}, {Blue})"
+    },
+    {
+      "Id": "block.set_lcd_text",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Set LCD Text",
+      "Description": "Writes text to an LCD or text panel.",
+      "Search": "lcd text panel write display",
+      "ActionType": "SetLcdText",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "LCD Panel",
+          "Options": []
+        },
+        "Text": {
+          "Type": "multiline",
+          "DefaultValue": "System active.",
+          "Options": []
+        }
+      },
+      "Preview": "LCD {BlockName}: {Text}"
+    },
+    {
+      "Id": "block.set_lcd_group_text",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Set LCD Group Text",
+      "Description": "Writes text to every LCD/Text Panel in a group.",
+      "Search": "lcd group text panel display write",
+      "ActionType": "SetLcdGroupText",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "LCD Group",
+          "Options": []
+        },
+        "Text": {
+          "Type": "multiline",
+          "DefaultValue": "Hello from Scriptilyx - SE.",
+          "Options": []
+        }
+      },
+      "Preview": "LCD group {GroupName}: {Text}"
+    },
+    {
+      "Id": "block.connector_lock",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Connector Lock",
+      "Description": "Requests connector lock/connect.",
+      "Search": "connector lock connect dock",
+      "ActionType": "ConnectorConnect",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Connector",
+          "Options": []
+        }
+      },
+      "Preview": "Connector {BlockName} lock"
+    },
+    {
+      "Id": "block.connector_unlock",
+      "Category": "\uD83D\uDEAA Doors / Lights / LCD / Connectors",
+      "Title": "Connector Unlock",
+      "Description": "Requests connector unlock/disconnect.",
+      "Search": "connector unlock disconnect undock",
+      "ActionType": "ConnectorDisconnect",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Connector",
+          "Options": []
+        }
+      },
+      "Preview": "Connector {BlockName} unlock"
+    },
+    {
+      "Id": "flight.thruster_on",
+      "Category": "\uD83D\uDE80 Flight / Thrusters / Gyros",
+      "Title": "Thruster On",
+      "Description": "Turns on a thruster by exact name.",
+      "Search": "thruster on thrust engine",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Thruster",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Thruster on: {BlockName}"
+    },
+    {
+      "Id": "flight.thruster_off",
+      "Category": "\uD83D\uDE80 Flight / Thrusters / Gyros",
+      "Title": "Thruster Off",
+      "Description": "Turns off a thruster by exact name.",
+      "Search": "thruster off thrust engine",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Thruster",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Thruster off: {BlockName}"
+    },
+    {
+      "Id": "flight.thruster_override",
+      "Category": "\uD83D\uDE80 Flight / Thrusters / Gyros",
+      "Title": "Thruster Override %",
+      "Description": "Sets one thruster override percentage.",
+      "Search": "thruster override percent thrust",
+      "ActionType": "SetThrusterOverridePercent",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Forward Thruster",
+          "Options": []
+        },
+        "Percent": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Thruster {BlockName} override = {Percent}%"
+    },
+    {
+      "Id": "flight.gyro_override_on",
+      "Category": "\uD83D\uDE80 Flight / Thrusters / Gyros",
+      "Title": "Gyro Override On",
+      "Description": "Turns gyro override on.",
+      "Search": "gyro gyroscope override on",
+      "ActionType": "SetGyroOverride",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Gyroscope",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Gyro override on: {BlockName}"
+    },
+    {
+      "Id": "flight.gyro_override_off",
+      "Category": "\uD83D\uDE80 Flight / Thrusters / Gyros",
+      "Title": "Gyro Override Off",
+      "Description": "Turns gyro override off.",
+      "Search": "gyro override off",
+      "ActionType": "SetGyroOverride",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Gyroscope",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Gyro {BlockName} override off"
+    },
+    {
+      "Id": "flight.gyro_ypr",
+      "Category": "\uD83D\uDE80 Flight / Thrusters / Gyros",
+      "Title": "Gyro Yaw Pitch Roll",
+      "Description": "Sets gyro yaw, pitch, and roll.",
+      "Search": "gyro yaw pitch roll",
+      "ActionType": "SetGyroYawPitchRoll",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Gyroscope",
+          "Options": []
+        },
+        "Yaw": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        },
+        "Pitch": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        },
+        "Roll": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Gyro {BlockName} Y:{Yaw} P:{Pitch} R:{Roll}"
+    },
+    {
+      "Id": "mechanical.piston_extend",
+      "Category": "\u2699 Mechanical",
+      "Title": "Piston Extend",
+      "Description": "Sets piston velocity positive.",
+      "Search": "piston extend velocity",
+      "ActionType": "SetPistonVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Piston",
+          "Options": []
+        },
+        "Velocity": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "Piston {BlockName} velocity {Velocity}"
+    },
+    {
+      "Id": "mechanical.piston_retract",
+      "Category": "\u2699 Mechanical",
+      "Title": "Piston Retract",
+      "Description": "Sets piston velocity negative.",
+      "Search": "piston retract velocity",
+      "ActionType": "SetPistonVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Piston",
+          "Options": []
+        },
+        "Velocity": {
+          "Type": "number",
+          "DefaultValue": "-1",
+          "Options": []
+        }
+      },
+      "Preview": "Piston {BlockName} velocity {Velocity}"
+    },
+    {
+      "Id": "mechanical.piston_stop",
+      "Category": "\u2699 Mechanical",
+      "Title": "Piston Stop",
+      "Description": "Stops piston movement.",
+      "Search": "piston stop",
+      "ActionType": "SetPistonVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Piston",
+          "Options": []
+        },
+        "Velocity": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Stop piston {BlockName}"
+    },
+    {
+      "Id": "mechanical.rotor_velocity",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Set Velocity",
+      "Description": "Sets rotor or hinge target velocity in RPM.",
+      "Search": "rotor hinge motor velocity rpm",
+      "ActionType": "SetRotorVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "VelocityRPM": {
+          "Type": "number",
+          "DefaultValue": "5",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName} velocity {VelocityRPM} RPM"
+    },
+    {
+      "Id": "utility.timer_trigger",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Timer Trigger",
+      "Description": "Triggers a timer block immediately.",
+      "Search": "timer trigger now immediate",
+      "ActionType": "TimerTrigger",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Timer Block",
+          "Options": []
+        }
+      },
+      "Preview": "Trigger timer {BlockName}"
+    },
+    {
+      "Id": "utility.timer_start",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Timer Start Countdown",
+      "Description": "Starts a timer block countdown.",
+      "Search": "timer start countdown",
+      "ActionType": "TimerStart",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Timer Block",
+          "Options": []
+        }
+      },
+      "Preview": "Start timer {BlockName}"
+    },
+    {
+      "Id": "utility.timer_stop",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Timer Stop Countdown",
+      "Description": "Stops a timer block countdown.",
+      "Search": "timer stop countdown cancel",
+      "ActionType": "TimerStop",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Timer Block",
+          "Options": []
+        }
+      },
+      "Preview": "Stop timer {BlockName}"
+    },
+    {
+      "Id": "utility.sound_play",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Sound Play",
+      "Description": "Plays a sound block.",
+      "Search": "sound block play alarm",
+      "ActionType": "SoundPlay",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Sound Block",
+          "Options": []
+        }
+      },
+      "Preview": "Play sound {BlockName}"
+    },
+    {
+      "Id": "utility.sound_stop",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Sound Stop",
+      "Description": "Stops a sound block.",
+      "Search": "sound block stop alarm",
+      "ActionType": "SoundStop",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Sound Block",
+          "Options": []
+        }
+      },
+      "Preview": "Stop sound {BlockName}"
+    },
+    {
+      "Id": "utility.gas_stockpile_on",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Gas Tank Stockpile On",
+      "Description": "Turns gas tank stockpile on.",
+      "Search": "gas tank hydrogen oxygen stockpile on",
+      "ActionType": "SetGasTankStockpile",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hydrogen Tank",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Gas tank {BlockName} stockpile on"
+    },
+    {
+      "Id": "utility.gas_stockpile_off",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Gas Tank Stockpile Off",
+      "Description": "Turns gas tank stockpile off.",
+      "Search": "gas tank hydrogen oxygen stockpile off",
+      "ActionType": "SetGasTankStockpile",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hydrogen Tank",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Gas tank {BlockName} stockpile off"
+    },
+    {
+      "Id": "utility.airvent_depressurize_on",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Air Vent Depressurize On",
+      "Description": "Turns depressurize on for an air vent.",
+      "Search": "air vent depressurize on",
+      "ActionType": "SetAirVentDepressurize",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Air Vent",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Air vent {BlockName} depressurize on"
+    },
+    {
+      "Id": "utility.airvent_depressurize_off",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Air Vent Depressurize Off",
+      "Description": "Turns depressurize off for an air vent.",
+      "Search": "air vent depressurize off pressurize",
+      "ActionType": "SetAirVentDepressurize",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Air Vent",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Air vent {BlockName} depressurize off"
+    },
+    {
+      "Id": "tool.drill_on",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Drill On",
+      "Description": "Turns one drill on.",
+      "Search": "drill tool mining on",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Drill",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Drill {BlockName} on"
+    },
+    {
+      "Id": "tool.drill_off",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Drill Off",
+      "Description": "Turns one drill off.",
+      "Search": "drill tool mining off",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Drill",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Drill {BlockName} off"
+    },
+    {
+      "Id": "tool.welder_on",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Welder On",
+      "Description": "Turns a welder on.",
+      "Search": "welder tool on",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Welder",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Welder on: {BlockName}"
+    },
+    {
+      "Id": "tool.welder_off",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Welder Off",
+      "Description": "Turns a welder off.",
+      "Search": "welder tool off",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Welder",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Welder off: {BlockName}"
+    },
+    {
+      "Id": "tool.grinder_on",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Grinder On",
+      "Description": "Turns a grinder on.",
+      "Search": "grinder tool on",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Grinder",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Grinder on: {BlockName}"
+    },
+    {
+      "Id": "tool.grinder_off",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Grinder Off",
+      "Description": "Turns a grinder off.",
+      "Search": "grinder tool off",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Grinder",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Grinder off: {BlockName}"
+    },
+    {
+      "Id": "production.assembler_on",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Assembler On",
+      "Description": "Turns an assembler on.",
+      "Search": "assembler production on",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Assembler",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Assembler on: {BlockName}"
+    },
+    {
+      "Id": "production.assembler_off",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Assembler Off",
+      "Description": "Turns an assembler off.",
+      "Search": "assembler production off",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Assembler",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Assembler off: {BlockName}"
+    },
+    {
+      "Id": "production.refinery_on",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Refinery On",
+      "Description": "Turns a refinery on.",
+      "Search": "refinery production on",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Refinery",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Refinery on: {BlockName}"
+    },
+    {
+      "Id": "production.refinery_off",
+      "Category": "\uD83C\uDFED Production / Tools",
+      "Title": "Refinery Off",
+      "Description": "Turns a refinery off.",
+      "Search": "refinery production off",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Refinery",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Refinery off: {BlockName}"
+    },
+    {
+      "Id": "button.command",
+      "Category": "\uD83D\uDD18 Buttons / Arguments",
+      "Title": "Button Command",
+      "Description": "Routes a programmable block argument to a True or False branch.",
+      "Search": "button argument command route",
+      "ActionType": "IfArgumentEquals",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Argument": {
+          "Type": "text",
+          "DefaultValue": "startup",
+          "Options": []
+        }
+      },
+      "Preview": "Button argument == \u0022{Argument}\u0022"
+    },
+    {
+      "Id": "button.command_startup",
+      "Category": "\uD83D\uDD18 Buttons / Arguments",
+      "Title": "Button Command: startup",
+      "Description": "Use this with a Space Engineers button panel. Set the button to run the programmable block with this argument.",
+      "Search": "button panel command argument press trigger",
+      "ActionType": "IfArgumentEquals",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Argument": {
+          "Type": "text",
+          "DefaultValue": "startup",
+          "Options": []
+        }
+      },
+      "Preview": "Button argument == \u0022startup\u0022"
+    },
+    {
+      "Id": "button.command_dock",
+      "Category": "\uD83D\uDD18 Buttons / Arguments",
+      "Title": "Button Command: dock",
+      "Description": "Use this with a Space Engineers button panel. Set the button to run the programmable block with this argument.",
+      "Search": "button panel command argument press trigger",
+      "ActionType": "IfArgumentEquals",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Argument": {
+          "Type": "text",
+          "DefaultValue": "dock",
+          "Options": []
+        }
+      },
+      "Preview": "Button argument == \u0022dock\u0022"
+    },
+    {
+      "Id": "button.command_mine",
+      "Category": "\uD83D\uDD18 Buttons / Arguments",
+      "Title": "Button Command: mine",
+      "Description": "Use this with a Space Engineers button panel. Set the button to run the programmable block with this argument.",
+      "Search": "button panel command argument press trigger",
+      "ActionType": "IfArgumentEquals",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "Argument": {
+          "Type": "text",
+          "DefaultValue": "mine",
+          "Options": []
+        }
+      },
+      "Preview": "Button argument == \u0022mine\u0022"
+    },
+    {
+      "Id": "logic.wait_seconds",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Wait Seconds",
+      "Description": "Waits before continuing to the next connected node. Uses Runtime.UpdateFrequency automatically.",
+      "Search": "wait delay seconds pause timer",
+      "ActionType": "WaitSeconds",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Seconds": {
+          "Type": "number",
+          "DefaultValue": "3",
+          "Options": []
+        }
+      },
+      "Preview": "Wait {Seconds} seconds"
+    },
+    {
+      "Id": "logic.command_router",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Command Router",
+      "Description": "Routes many programmable block arguments from one node.",
+      "Search": "command router argument startup shutdown dock undock mine stop status",
+      "ActionType": "CommandRouter",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "startup",
+        "shutdown",
+        "dock",
+        "undock",
+        "mine",
+        "stop",
+        "status",
+        "open_airlock",
+        "close_airlock",
+        "open_hangar",
+        "close_hangar",
+        "unknown"
+      ],
+      "Properties": {
+        "StartupArgument": {
+          "Type": "text",
+          "DefaultValue": "startup",
+          "Options": []
+        },
+        "ShutdownArgument": {
+          "Type": "text",
+          "DefaultValue": "shutdown",
+          "Options": []
+        },
+        "DockArgument": {
+          "Type": "text",
+          "DefaultValue": "dock",
+          "Options": []
+        },
+        "UndockArgument": {
+          "Type": "text",
+          "DefaultValue": "undock",
+          "Options": []
+        },
+        "MineArgument": {
+          "Type": "text",
+          "DefaultValue": "mine",
+          "Options": []
+        },
+        "StopArgument": {
+          "Type": "text",
+          "DefaultValue": "stop",
+          "Options": []
+        },
+        "StatusArgument": {
+          "Type": "text",
+          "DefaultValue": "status",
+          "Options": []
+        },
+        "OpenAirlockArgument": {
+          "Type": "text",
+          "DefaultValue": "open_airlock",
+          "Options": []
+        },
+        "CloseAirlockArgument": {
+          "Type": "text",
+          "DefaultValue": "close_airlock",
+          "Options": []
+        },
+        "OpenHangarArgument": {
+          "Type": "text",
+          "DefaultValue": "open_hangar",
+          "Options": []
+        },
+        "CloseHangarArgument": {
+          "Type": "text",
+          "DefaultValue": "close_hangar",
+          "Options": []
+        }
+      },
+      "Preview": "Route command argument"
+    },
+    {
+      "Id": "section.start",
+      "Category": "\uD83D\uDCE6 Sections / Subroutines",
+      "Title": "Start Section",
+      "Description": "Creates a named reusable section. Call it with a Call Section node.",
+      "Search": "section subroutine start function",
+      "ActionType": "StartSection",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SectionName": {
+          "Type": "text",
+          "DefaultValue": "StartupSection",
+          "Options": []
+        }
+      },
+      "Preview": "Start section {SectionName}"
+    },
+    {
+      "Id": "section.call",
+      "Category": "\uD83D\uDCE6 Sections / Subroutines",
+      "Title": "Call Section",
+      "Description": "Runs a named section and returns to the next node after the call.",
+      "Search": "call section subroutine function",
+      "ActionType": "CallSection",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SectionName": {
+          "Type": "text",
+          "DefaultValue": "StartupSection",
+          "Options": []
+        }
+      },
+      "Preview": "Call section {SectionName}"
+    },
+    {
+      "Id": "section.return",
+      "Category": "\uD83D\uDCE6 Sections / Subroutines",
+      "Title": "Return",
+      "Description": "Returns from the current section.",
+      "Search": "return section subroutine",
+      "ActionType": "Return",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [],
+      "Properties": {},
+      "Preview": "Return from section"
+    },
+    {
+      "Id": "advanced.stop_script",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Stop Script",
+      "Description": "Stops the current script and turns off automatic Runtime.UpdateFrequency so the programmable block stops running itself.",
+      "Search": "stop script end branch return finish exit runtime update none",
+      "ActionType": "StopScript",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [],
+      "Properties": {},
+      "Preview": "Stop script and turn off runtime updates"
+    },
+    {
+      "Id": "logic.repeat_times",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Repeat Times",
+      "Description": "Repeats the Loop path a set number of times, then continues through Done. Use In for first entry and Repeat for loop-back returns.",
+      "Search": "repeat times loop count for while repeat loop done safe multi tick loopback repeat input",
+      "ActionType": "RepeatTimes",
+      "InputPorts": [
+        "In",
+        "Repeat"
+      ],
+      "OutputPorts": [
+        "Loop",
+        "Done"
+      ],
+      "Properties": {
+        "Times": {
+          "Type": "number",
+          "DefaultValue": "5",
+          "Options": []
+        }
+      },
+      "Preview": "Repeat Loop path {Times} times, then continue through Done"
+    },
+    {
+      "Id": "advanced.custom_code",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Custom Code",
+      "Description": "Advanced users only. Inserts custom C# code into the generated script.",
+      "Search": "custom code csharp advanced",
+      "ActionType": "CustomCode",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "Code": {
+          "Type": "multiline",
+          "DefaultValue": "// custom code here",
+          "Options": []
+        }
+      },
+      "Preview": "Custom C# code"
+    },
+    {
+      "Id": "logic.number_greater_router",
+      "Category": "\uD83E\uDDE0 Logic",
+      "Title": "Number Greater Router",
+      "Description": "Routes a number variable to different outputs based on how high the number is.",
+      "Search": "number greater router variable count threshold level multiple outputs greater than",
+      "ActionType": "NumberGreaterRouter",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Greater2",
+        "Greater3",
+        "Greater4",
+        "Greater5",
+        "Greater6",
+        "Else"
+      ],
+      "Properties": {
+        "Name": {
+          "Type": "text",
+          "DefaultValue": "count",
+          "Options": []
+        },
+        "Threshold2": {
+          "Type": "number",
+          "DefaultValue": "2",
+          "Options": []
+        },
+        "Threshold3": {
+          "Type": "number",
+          "DefaultValue": "3",
+          "Options": []
+        },
+        "Threshold4": {
+          "Type": "number",
+          "DefaultValue": "4",
+          "Options": []
+        },
+        "Threshold5": {
+          "Type": "number",
+          "DefaultValue": "5",
+          "Options": []
+        },
+        "Threshold6": {
+          "Type": "number",
+          "DefaultValue": "6",
+          "Options": []
+        }
+      },
+      "Preview": "Route {Name}: \u003E2, \u003E3, \u003E4, \u003E5, \u003E6"
+    }
+  ]
+}

@@ -2123,6 +2123,911 @@
         }
       },
       "Preview": "Route {Name}: \u003E2, \u003E3, \u003E4, \u003E5, \u003E6"
+    },
+    {
+      "Id": "merge.block_on",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Merge Block On",
+      "Description": "Turns on a merge block by exact block name.",
+      "Search": "merge block on enable connected attach lock",
+      "ActionType": "SetMergeBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Merge Block",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn on merge block {BlockName}"
+    },
+    {
+      "Id": "merge.block_off",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Merge Block Off",
+      "Description": "Turns off a merge block by exact block name.",
+      "Search": "merge block off disable disconnect release detach",
+      "ActionType": "SetMergeBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Merge Block",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn off merge block {BlockName}"
+    },
+    {
+      "Id": "merge.if_connected",
+      "Category": "\u2705 Checks",
+      "Title": "If Merge Block Connected",
+      "Description": "Checks if a merge block is currently connected.",
+      "Search": "merge block connected check if true false attached locked",
+      "ActionType": "IfMergeBlockConnected",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Merge Block",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName} connected?"
+    },
+    {
+      "Id": "sensor.block_on",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Sensor On",
+      "Description": "Turns on a sensor block by exact block name.",
+      "Search": "sensor block on enable detector",
+      "ActionType": "SetSensorEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Sensor",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn on sensor {BlockName}"
+    },
+    {
+      "Id": "sensor.block_off",
+      "Category": "\uD83D\uDD32 Blocks / Groups",
+      "Title": "Sensor Off",
+      "Description": "Turns off a sensor block by exact block name.",
+      "Search": "sensor block off disable detector",
+      "ActionType": "SetSensorEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Sensor",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn off sensor {BlockName}"
+    },
+    {
+      "Id": "sensor.if_active",
+      "Category": "\u2705 Checks",
+      "Title": "If Sensor Active",
+      "Description": "Checks if a sensor is currently detecting something.",
+      "Search": "sensor active detects detected entity player grid check if true false",
+      "ActionType": "IfSensorActive",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Sensor",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName} detecting something?"
+    },
+    {
+      "Id": "hinge.block_on",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge On",
+      "Description": "Turns on a hinge by exact block name.",
+      "Search": "hinge on enable motor stator",
+      "ActionType": "SetHingeEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn on hinge {BlockName}"
+    },
+    {
+      "Id": "hinge.block_off",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Off",
+      "Description": "Turns off a hinge by exact block name.",
+      "Search": "hinge off disable motor stator",
+      "ActionType": "SetHingeEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn off hinge {BlockName}"
+    },
+    {
+      "Id": "hinge.set_velocity",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Set Velocity RPM",
+      "Description": "Sets hinge target velocity in RPM. Use a negative value to rotate the other direction.",
+      "Search": "hinge velocity rpm speed rotate motor stator",
+      "ActionType": "SetHingeVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "VelocityRPM": {
+          "Type": "number",
+          "DefaultValue": "5",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} velocity to {VelocityRPM} RPM"
+    },
+    {
+      "Id": "hinge.stop",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Stop",
+      "Description": "Stops hinge rotation by setting velocity to 0 RPM.",
+      "Search": "hinge stop velocity zero rpm motor stator",
+      "ActionType": "SetHingeVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "VelocityRPM": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Stop hinge {BlockName}"
+    },
+    {
+      "Id": "hinge.set_limits",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Set Limits",
+      "Description": "Sets hinge lower and upper angle limits in degrees.",
+      "Search": "hinge limits lower upper degrees angle min max motor stator",
+      "ActionType": "SetHingeLimits",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "LowerLimitDeg": {
+          "Type": "number",
+          "DefaultValue": "-90",
+          "Options": []
+        },
+        "UpperLimitDeg": {
+          "Type": "number",
+          "DefaultValue": "90",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} limits {LowerLimitDeg}\u00B0 to {UpperLimitDeg}\u00B0"
+    },
+    {
+      "Id": "hinge.clear_limits",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Clear Limits",
+      "Description": "Clears hinge limits so it can rotate freely.",
+      "Search": "hinge clear limits unlimited free rotate motor stator",
+      "ActionType": "ClearHingeLimits",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        }
+      },
+      "Preview": "Clear limits on hinge {BlockName}"
+    },
+    {
+      "Id": "hinge.set_torque",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Set Torque",
+      "Description": "Sets hinge moving torque.",
+      "Search": "hinge torque force power motor stator",
+      "ActionType": "SetHingeTorque",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "Torque": {
+          "Type": "number",
+          "DefaultValue": "1000000",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} torque to {Torque}"
+    },
+    {
+      "Id": "hinge.set_braking_torque",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Set Braking Torque",
+      "Description": "Sets hinge braking torque.",
+      "Search": "hinge braking torque brake force stop motor stator",
+      "ActionType": "SetHingeBrakingTorque",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "BrakingTorque": {
+          "Type": "number",
+          "DefaultValue": "1000000",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} braking torque to {BrakingTorque}"
+    },
+    {
+      "Id": "hinge.set_displacement",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Set Displacement",
+      "Description": "Sets hinge displacement.",
+      "Search": "hinge displacement offset motor stator",
+      "ActionType": "SetHingeDisplacement",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "Displacement": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} displacement to {Displacement}"
+    },
+    {
+      "Id": "hinge.set_safety_lock_speed",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Set Safety Lock Speed",
+      "Description": "Sets the hinge safety lock speed value.",
+      "Search": "hinge safety lock speed motor stator",
+      "ActionType": "SetHingeSafetyLockSpeed",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "SafetyLockSpeed": {
+          "Type": "number",
+          "DefaultValue": "0.5",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} safety lock speed to {SafetyLockSpeed}"
+    },
+    {
+      "Id": "hinge.lock_on",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Rotor Lock On",
+      "Description": "Turns hinge rotor lock on using the terminal RotorLock property.",
+      "Search": "hinge rotor lock on locked safety motor stator",
+      "ActionType": "SetHingeRotorLock",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "Locked": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Lock hinge {BlockName}"
+    },
+    {
+      "Id": "hinge.lock_off",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Rotor Lock Off",
+      "Description": "Turns hinge rotor lock off using the terminal RotorLock property.",
+      "Search": "hinge rotor lock off unlocked safety motor stator",
+      "ActionType": "SetHingeRotorLock",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "Locked": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Unlock hinge {BlockName}"
+    },
+    {
+      "Id": "hinge.attach",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Attach Top",
+      "Description": "Attempts to attach a nearby hinge top part.",
+      "Search": "hinge attach top part rotor motor stator",
+      "ActionType": "HingeAttach",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        }
+      },
+      "Preview": "Attach hinge top on {BlockName}"
+    },
+    {
+      "Id": "hinge.detach",
+      "Category": "\u2699 Mechanical",
+      "Title": "Hinge Detach Top",
+      "Description": "Detaches the hinge top part.",
+      "Search": "hinge detach top part rotor motor stator",
+      "ActionType": "HingeDetach",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        }
+      },
+      "Preview": "Detach hinge top on {BlockName}"
+    },
+    {
+      "Id": "hinge.if_attached",
+      "Category": "\u2705 Checks",
+      "Title": "If Hinge Attached",
+      "Description": "Checks if the hinge has a top part attached.",
+      "Search": "hinge attached check if top part true false",
+      "ActionType": "IfHingeAttached",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName} attached?"
+    },
+    {
+      "Id": "hinge.if_angle_above",
+      "Category": "\u2705 Checks",
+      "Title": "If Hinge Angle Above",
+      "Description": "Checks if the hinge angle is above a number of degrees.",
+      "Search": "hinge angle above greater than degrees check true false",
+      "ActionType": "IfHingeAngleAbove",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "AngleDeg": {
+          "Type": "number",
+          "DefaultValue": "45",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName} angle \u003E {AngleDeg}\u00B0?"
+    },
+    {
+      "Id": "hinge.if_angle_below",
+      "Category": "\u2705 Checks",
+      "Title": "If Hinge Angle Below",
+      "Description": "Checks if the hinge angle is below a number of degrees.",
+      "Search": "hinge angle below less than degrees check true false",
+      "ActionType": "IfHingeAngleBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Hinge",
+          "Options": []
+        },
+        "AngleDeg": {
+          "Type": "number",
+          "DefaultValue": "45",
+          "Options": []
+        }
+      },
+      "Preview": "{BlockName} angle \u003C {AngleDeg}\u00B0?"
+    },
+    {
+      "Id": "power.jump_drive_on",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Jump Drive On",
+      "Description": "Turns a jump drive on.",
+      "Search": "jump drive on enable power",
+      "ActionType": "SetJumpDriveEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn on {BlockName}"
+    },
+    {
+      "Id": "power.jump_drive_off",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Jump Drive Off",
+      "Description": "Turns a jump drive off.",
+      "Search": "jump drive off disable power",
+      "ActionType": "SetJumpDriveEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn off {BlockName}"
+    },
+    {
+      "Id": "power.jump_drive_recharge_on",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Jump Drive Recharge On",
+      "Description": "Turns jump drive recharge on.",
+      "Search": "jump drive recharge on charging",
+      "ActionType": "SetJumpDriveRecharge",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Recharge on for {BlockName}"
+    },
+    {
+      "Id": "power.jump_drive_recharge_off",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Jump Drive Recharge Off",
+      "Description": "Turns jump drive recharge off.",
+      "Search": "jump drive recharge off charging",
+      "ActionType": "SetJumpDriveRecharge",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Recharge off for {BlockName}"
+    },
+    {
+      "Id": "power.jump_drive_distance_percent",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Jump Drive Set Distance Percent",
+      "Description": "Sets the jump drive blind jump distance as a percent of its max distance.",
+      "Search": "jump drive distance percent ratio blind jump",
+      "ActionType": "SetJumpDriveDistancePercent",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Percent": {
+          "Type": "number",
+          "DefaultValue": "100",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} distance to {Percent}%"
+    },
+    {
+      "Id": "power.jump_drive_distance_km",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Jump Drive Set Distance KM",
+      "Description": "Sets the jump drive blind jump distance in kilometers, clamped to the drive\u0027s maximum distance.",
+      "Search": "jump drive distance km kilometers blind jump",
+      "ActionType": "SetJumpDriveDistanceKm",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Kilometers": {
+          "Type": "number",
+          "DefaultValue": "1000",
+          "Options": []
+        }
+      },
+      "Preview": "Set {BlockName} distance to {Kilometers} km"
+    },
+    {
+      "Id": "check.jump_drive_ready",
+      "Category": "\u2705 Checks",
+      "Title": "If Jump Drive Ready",
+      "Description": "Checks whether a jump drive is fully charged and ready.",
+      "Search": "jump drive ready charged full check",
+      "ActionType": "IfJumpDriveReady",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        }
+      },
+      "Preview": "If {BlockName} is ready"
+    },
+    {
+      "Id": "check.jump_drive_charge_above",
+      "Category": "\u2705 Checks",
+      "Title": "If Jump Drive Charge Above %",
+      "Description": "Checks whether jump drive charge is above a percent.",
+      "Search": "jump drive charge above percent check battery power",
+      "ActionType": "IfJumpDriveChargeAbove",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Percent": {
+          "Type": "number",
+          "DefaultValue": "90",
+          "Options": []
+        }
+      },
+      "Preview": "If {BlockName} charge \u003E {Percent}%"
+    },
+    {
+      "Id": "check.jump_drive_charge_below",
+      "Category": "\u2705 Checks",
+      "Title": "If Jump Drive Charge Below %",
+      "Description": "Checks whether jump drive charge is below a percent.",
+      "Search": "jump drive charge below percent check battery power",
+      "ActionType": "IfJumpDriveChargeBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "Percent": {
+          "Type": "number",
+          "DefaultValue": "90",
+          "Options": []
+        }
+      },
+      "Preview": "If {BlockName} charge \u003C {Percent}%"
+    },
+    {
+      "Id": "power.jump_drive_status_lcd",
+      "Category": "\u26A1 Power / Air / Utility",
+      "Title": "Set Jump Drive Status LCD",
+      "Description": "Writes jump drive charge, ready status, selected distance, and max distance to an LCD.",
+      "Search": "jump drive lcd status charge distance display",
+      "ActionType": "SetJumpDriveStatusLcd",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive",
+          "Options": []
+        },
+        "LcdName": {
+          "Type": "text",
+          "DefaultValue": "Jump Drive LCD",
+          "Options": []
+        }
+      },
+      "Preview": "Write {BlockName} status to {LcdName}"
     }
   ]
 }

@@ -1,3 +1,17 @@
-Added Jump Drive Block Node
-Added Script Folders Tab
-Added Local script Save Tab
+Updates for:
+
+Merge Block nodes
+Sensor nodes
+Hinge nodes
+Jump Drive nodes
+Script Folders tab
+Choose Start Folder
+Folder / .cs file tree
+Create Folder
+Delete Selected
+Save Script Preview as Script.cs
+Fixed read-only Script.cs file name
+Updated troubleshooting
+Updated examples
+Updated node reference
+Updated workflow

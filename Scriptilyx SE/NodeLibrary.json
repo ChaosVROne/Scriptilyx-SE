@@ -135,8 +135,8 @@
       "Id": "logic.custom_code",
       "Category": "\uD83E\uDDE0 Logic",
       "Title": "Custom Code",
-      "Description": "Adds raw C# code into the generated script.",
-      "Search": "custom code raw csharp",
+      "Description": "Advanced custom C# node with editable input/output ports, snippets, helper methods, and CustomOutput routing.",
+      "Search": "custom code csharp advanced dynamic ports inputs outputs helper snippets",
       "ActionType": "CustomCode",
       "InputPorts": [
         "In"
@@ -145,13 +145,49 @@
         "Next"
       ],
       "Properties": {
+        "NodeTitle": {
+          "Type": "text",
+          "DefaultValue": "Custom Code",
+          "Options": []
+        },
+        "InputPorts": {
+          "Type": "text",
+          "DefaultValue": "In",
+          "Options": []
+        },
+        "OutputPorts": {
+          "Type": "text",
+          "DefaultValue": "Next",
+          "Options": []
+        },
+        "Snippet": {
+          "Type": "combo",
+          "DefaultValue": "None",
+          "Options": [
+            "None",
+            "Branch Output Template",
+            "Emergency Undock Template",
+            "LCD Status Template",
+            "Blank Helper Method"
+          ]
+        },
         "Code": {
           "Type": "multiline",
-          "DefaultValue": "// custom code here",
+          "DefaultValue": "// inputs: In\n// outputs: Next\nCustomOutput = \u0022Next\u0022;",
+          "Options": []
+        },
+        "HelperMethods": {
+          "Type": "multiline",
+          "DefaultValue": "// Optional helper methods",
+          "Options": []
+        },
+        "Notes": {
+          "Type": "multiline",
+          "DefaultValue": "Use InputPorts and OutputPorts to change what ports show on this node.",
           "Options": []
         }
       },
-      "Preview": "Raw C#"
+      "Preview": "{NodeTitle} | Inputs: {InputPorts} | Outputs: {OutputPorts}"
     },
     {
       "Id": "var.set_number",
@@ -2051,28 +2087,6 @@
       "Preview": "Repeat Loop path {Times} times, then continue through Done"
     },
     {
-      "Id": "advanced.custom_code",
-      "Category": "\uD83E\uDDE0 Logic",
-      "Title": "Custom Code",
-      "Description": "Advanced users only. Inserts custom C# code into the generated script.",
-      "Search": "custom code csharp advanced",
-      "ActionType": "CustomCode",
-      "InputPorts": [
-        "In"
-      ],
-      "OutputPorts": [
-        "Next"
-      ],
-      "Properties": {
-        "Code": {
-          "Type": "multiline",
-          "DefaultValue": "// custom code here",
-          "Options": []
-        }
-      },
-      "Preview": "Custom C# code"
-    },
-    {
       "Id": "logic.number_greater_router",
       "Category": "\uD83E\uDDE0 Logic",
       "Title": "Number Greater Router",
@@ -3028,6 +3042,1586 @@
         }
       },
       "Preview": "Write {BlockName} status to {LcdName}"
+    },
+    {
+      "Id": "ai.flight_on",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Flight On",
+      "Description": "Turns the AI Flight block on.",
+      "Search": "ai AI Flight On on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Flight",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Flight On: {BlockName}"
+    },
+    {
+      "Id": "ai.flight_off",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Flight Off",
+      "Description": "Turns the AI Flight block off.",
+      "Search": "ai AI Flight Off on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Flight",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Flight Off: {BlockName}"
+    },
+    {
+      "Id": "ai.offensive_on",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Offensive On",
+      "Description": "Turns the AI Offensive block on.",
+      "Search": "ai AI Offensive On on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Offensive On: {BlockName}"
+    },
+    {
+      "Id": "ai.offensive_off",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Offensive Off",
+      "Description": "Turns the AI Offensive block off.",
+      "Search": "ai AI Offensive Off on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Offensive Off: {BlockName}"
+    },
+    {
+      "Id": "ai.defensive_on",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Defensive On",
+      "Description": "Turns the AI Defensive block on.",
+      "Search": "ai AI Defensive On on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Defensive Combat",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Defensive On: {BlockName}"
+    },
+    {
+      "Id": "ai.defensive_off",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Defensive Off",
+      "Description": "Turns the AI Defensive block off.",
+      "Search": "ai AI Defensive Off on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Defensive Combat",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Defensive Off: {BlockName}"
+    },
+    {
+      "Id": "ai.basic_task_on",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Basic Task On",
+      "Description": "Turns the AI Basic Task block on.",
+      "Search": "ai AI Basic Task On on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Basic Task",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Basic Task On: {BlockName}"
+    },
+    {
+      "Id": "ai.basic_task_off",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Basic Task Off",
+      "Description": "Turns the AI Basic Task block off.",
+      "Search": "ai AI Basic Task Off on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Basic Task",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Basic Task Off: {BlockName}"
+    },
+    {
+      "Id": "ai.recorder_on",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Recorder On",
+      "Description": "Turns the AI Recorder block on.",
+      "Search": "ai AI Recorder On on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Recorder",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Recorder On: {BlockName}"
+    },
+    {
+      "Id": "ai.recorder_off",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Recorder Off",
+      "Description": "Turns the AI Recorder block off.",
+      "Search": "ai AI Recorder Off on off enable disable",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Recorder",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "AI Recorder Off: {BlockName}"
+    },
+    {
+      "Id": "ai.set_block_enabled",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "Set AI Block Enabled",
+      "Description": "Turns any AI block on or off by block name.",
+      "Search": "ai block enabled on off",
+      "ActionType": "SetAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Flight",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Set AI block {BlockName} enabled = {Enabled}"
+    },
+    {
+      "Id": "ai.set_group_enabled",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "Set AI Group Enabled",
+      "Description": "Turns all functional blocks in an AI group on or off.",
+      "Search": "ai group enabled on off",
+      "ActionType": "SetAiGroupEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "AI Blocks",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Set AI group {GroupName} enabled = {Enabled}"
+    },
+    {
+      "Id": "ai.apply_action",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Block Apply Action",
+      "Description": "Applies a terminal ActionId to an AI block. Use the API dump scanner for exact IDs.",
+      "Search": "ai apply action terminal actionid",
+      "ActionType": "AiBlockApplyAction",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "ActionId": {
+          "Type": "text",
+          "DefaultValue": "OnOff_On",
+          "Options": []
+        }
+      },
+      "Preview": "Apply AI action {ActionId}"
+    },
+    {
+      "Id": "ai.set_bool_property",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Block Set Bool Property",
+      "Description": "Sets a boolean terminal property on an AI block.",
+      "Search": "ai bool property set terminal",
+      "ActionType": "SetAiBlockBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Set AI bool {PropertyId} = {Value}"
+    },
+    {
+      "Id": "ai.set_float_property",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Block Set Float Property",
+      "Description": "Sets a float/number terminal property on an AI block.",
+      "Search": "ai float property set terminal",
+      "ActionType": "SetAiBlockFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Set AI float {PropertyId} = {Value}"
+    },
+    {
+      "Id": "ai.set_string_property",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Block Set String Property",
+      "Description": "Sets a string terminal property on an AI block.",
+      "Search": "ai string property set terminal",
+      "ActionType": "SetAiBlockString",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        }
+      },
+      "Preview": "Set AI string {PropertyId} = {Value}"
+    },
+    {
+      "Id": "ai.set_int_property",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "AI Block Set Int Property",
+      "Description": "Sets an integer terminal property on an AI block.",
+      "Search": "ai int property set terminal",
+      "ActionType": "SetAiBlockInt",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Set AI int {PropertyId} = {Value}"
+    },
+    {
+      "Id": "ai.if_enabled",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Block Enabled",
+      "Description": "Checks whether an AI block is enabled.",
+      "Search": "ai if enabled condition",
+      "ActionType": "IfAiBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Flight",
+          "Options": []
+        }
+      },
+      "Preview": "If AI block enabled"
+    },
+    {
+      "Id": "ai.if_working",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Block Working",
+      "Description": "Checks whether an AI block is working.",
+      "Search": "ai if working condition",
+      "ActionType": "IfAiBlockWorking",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Flight",
+          "Options": []
+        }
+      },
+      "Preview": "If AI block working"
+    },
+    {
+      "Id": "ai.if_offensive_has_target",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Offensive Has Target",
+      "Description": "Attempts to check common target/enemy terminal properties on AI Offensive Combat.",
+      "Search": "ai offensive enemy target detected",
+      "ActionType": "IfAiOffensiveHasTarget",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        }
+      },
+      "Preview": "If AI Offensive has target"
+    },
+    {
+      "Id": "ai.if_bool_true",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Bool Property True",
+      "Description": "Checks whether a boolean terminal property on an AI block is true.",
+      "Search": "ai bool property true",
+      "ActionType": "IfAiBlockBoolTrue",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "HasTarget",
+          "Options": []
+        }
+      },
+      "Preview": "If AI bool {PropertyId} true"
+    },
+    {
+      "Id": "ai.if_bool_false",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Bool Property False",
+      "Description": "Checks whether a boolean terminal property on an AI block is false.",
+      "Search": "ai bool property false",
+      "ActionType": "IfAiBlockBoolFalse",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "HasTarget",
+          "Options": []
+        }
+      },
+      "Preview": "If AI bool {PropertyId} false"
+    },
+    {
+      "Id": "ai.if_float_above",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Float Property Above",
+      "Description": "Checks whether a numeric terminal property on an AI block is above a value.",
+      "Search": "ai float property above",
+      "ActionType": "IfAiBlockFloatAbove",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "If AI float {PropertyId} \u003E {Value}"
+    },
+    {
+      "Id": "ai.if_float_below",
+      "Category": "\u2705 Checks",
+      "Title": "If AI Float Property Below",
+      "Description": "Checks whether a numeric terminal property on an AI block is below a value.",
+      "Search": "ai float property below",
+      "ActionType": "IfAiBlockFloatBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "If AI float {PropertyId} \u003C {Value}"
+    },
+    {
+      "Id": "ai.status_lcd",
+      "Category": "\uD83E\uDD16 AI Blocks",
+      "Title": "Set AI Status LCD",
+      "Description": "Writes AI enabled/working/target status to an LCD.",
+      "Search": "ai status lcd",
+      "ActionType": "SetAiStatusLcd",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "AI Offensive Combat",
+          "Options": []
+        },
+        "LcdName": {
+          "Type": "text",
+          "DefaultValue": "AI Status LCD",
+          "Options": []
+        }
+      },
+      "Preview": "Write AI status LCD"
+    },
+    {
+      "Id": "event_controller_on",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller On",
+      "Description": "Turns the Event Controller block on.",
+      "Search": "event controller on off enable disable",
+      "ActionType": "SetEventControllerEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Event Controller On: {BlockName}"
+    },
+    {
+      "Id": "event_controller_off",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller Off",
+      "Description": "Turns the Event Controller block off.",
+      "Search": "event controller on off enable disable",
+      "ActionType": "SetEventControllerEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Event Controller Off: {BlockName}"
+    },
+    {
+      "Id": "event_controller.set_enabled",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Set Event Controller Enabled",
+      "Description": "Turns an Event Controller on or off.",
+      "Search": "event controller enabled",
+      "ActionType": "SetEventControllerEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Set Event Controller enabled = {Enabled}"
+    },
+    {
+      "Id": "event_controller.set_group_enabled",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Set Event Controller Group Enabled",
+      "Description": "Turns all functional blocks in an Event Controller group on or off.",
+      "Search": "event controller group enabled",
+      "ActionType": "SetEventControllerGroupEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "Event Controllers",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Set Event Controller group enabled"
+    },
+    {
+      "Id": "event_controller.apply_action",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller Apply Action",
+      "Description": "Applies a terminal ActionId to an Event Controller. Use the API dump scanner for exact IDs.",
+      "Search": "event controller apply action actionid",
+      "ActionType": "EventControllerApplyAction",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "ActionId": {
+          "Type": "text",
+          "DefaultValue": "OnOff_On",
+          "Options": []
+        }
+      },
+      "Preview": "Apply Event Controller action {ActionId}"
+    },
+    {
+      "Id": "event_controller.set_bool_property",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller Set Bool Property",
+      "Description": "Sets a boolean terminal property on an Event Controller.",
+      "Search": "event controller bool property",
+      "ActionType": "SetEventControllerBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Set Event bool {PropertyId} = {Value}"
+    },
+    {
+      "Id": "event_controller.set_float_property",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller Set Float Property",
+      "Description": "Sets a float/number terminal property on an Event Controller.",
+      "Search": "event controller float property",
+      "ActionType": "SetEventControllerFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Set Event float {PropertyId} = {Value}"
+    },
+    {
+      "Id": "event_controller.set_string_property",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller Set String Property",
+      "Description": "Sets a string terminal property on an Event Controller.",
+      "Search": "event controller string property",
+      "ActionType": "SetEventControllerString",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        }
+      },
+      "Preview": "Set Event string {PropertyId} = {Value}"
+    },
+    {
+      "Id": "event_controller.set_int_property",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Event Controller Set Int Property",
+      "Description": "Sets an integer terminal property on an Event Controller.",
+      "Search": "event controller int property",
+      "ActionType": "SetEventControllerInt",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Set Event int {PropertyId} = {Value}"
+    },
+    {
+      "Id": "event_controller.if_enabled",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Enabled",
+      "Description": "Checks whether an Event Controller is enabled.",
+      "Search": "event controller if enabled",
+      "ActionType": "IfEventControllerEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        }
+      },
+      "Preview": "If Event Controller enabled"
+    },
+    {
+      "Id": "event_controller.if_working",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Working",
+      "Description": "Checks whether an Event Controller is working.",
+      "Search": "event controller if working",
+      "ActionType": "IfEventControllerWorking",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        }
+      },
+      "Preview": "If Event Controller working"
+    },
+    {
+      "Id": "event_controller.if_triggered",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Triggered",
+      "Description": "Attempts to check common triggered/condition-met terminal properties.",
+      "Search": "event controller triggered condition met",
+      "ActionType": "IfEventControllerTriggered",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        }
+      },
+      "Preview": "If Event Controller triggered"
+    },
+    {
+      "Id": "event_controller.if_bool_true",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Bool Property True",
+      "Description": "Checks whether a boolean terminal property on an Event Controller is true.",
+      "Search": "event controller bool property true",
+      "ActionType": "IfEventControllerBoolTrue",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "IsTriggered",
+          "Options": []
+        }
+      },
+      "Preview": "If Event bool {PropertyId} true"
+    },
+    {
+      "Id": "event_controller.if_bool_false",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Bool Property False",
+      "Description": "Checks whether a boolean terminal property on an Event Controller is false.",
+      "Search": "event controller bool property false",
+      "ActionType": "IfEventControllerBoolFalse",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "IsTriggered",
+          "Options": []
+        }
+      },
+      "Preview": "If Event bool {PropertyId} false"
+    },
+    {
+      "Id": "event_controller.if_float_above",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Float Property Above",
+      "Description": "Checks whether a numeric terminal property on an Event Controller is above a value.",
+      "Search": "event controller float property above",
+      "ActionType": "IfEventControllerFloatAbove",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "If Event float {PropertyId} \u003E {Value}"
+    },
+    {
+      "Id": "event_controller.if_float_below",
+      "Category": "\u2705 Checks",
+      "Title": "If Event Controller Float Property Below",
+      "Description": "Checks whether a numeric terminal property on an Event Controller is below a value.",
+      "Search": "event controller float property below",
+      "ActionType": "IfEventControllerFloatBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "If Event float {PropertyId} \u003C {Value}"
+    },
+    {
+      "Id": "event_controller.status_lcd",
+      "Category": "\uD83D\uDEF0 Event Controller",
+      "Title": "Set Event Controller Status LCD",
+      "Description": "Writes Event Controller enabled/working/triggered status to an LCD.",
+      "Search": "event controller status lcd",
+      "ActionType": "SetEventControllerStatusLcd",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Event Controller",
+          "Options": []
+        },
+        "LcdName": {
+          "Type": "text",
+          "DefaultValue": "Event Status LCD",
+          "Options": []
+        }
+      },
+      "Preview": "Write Event Controller status LCD"
+    },
+    {
+      "Id": "sorter.set_filter",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Set Sorter Filter",
+      "Description": "Opens the Sorter Filter Editor to build a whitelist or blacklist and then applies it to a conveyor sorter.",
+      "Search": "conveyor sorter whitelist blacklist filter editor item list drain all",
+      "ActionType": "SetConveyorSorterFilter",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "Mode": {
+          "Type": "combo",
+          "DefaultValue": "Whitelist",
+          "Options": [
+            "Whitelist",
+            "Blacklist"
+          ]
+        },
+        "DrainAll": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        },
+        "FilterItems": {
+          "Type": "multiline",
+          "DefaultValue": "MyObjectBuilder_Ore/Iron",
+          "Options": []
+        }
+      },
+      "Preview": "{SorterName}: {Mode} filter, DrainAll={DrainAll}"
+    },
+    {
+      "Id": "sorter.on",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Conveyor Sorter On",
+      "Description": "Turns a conveyor sorter on.",
+      "Search": "conveyor sorter on enable",
+      "ActionType": "SetConveyorSorterEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn on sorter {SorterName}"
+    },
+    {
+      "Id": "sorter.off",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Conveyor Sorter Off",
+      "Description": "Turns a conveyor sorter off.",
+      "Search": "conveyor sorter off disable",
+      "ActionType": "SetConveyorSorterEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Turn off sorter {SorterName}"
+    },
+    {
+      "Id": "sorter.set_drain_all",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Set Sorter Drain All",
+      "Description": "Turns Drain All on or off for a conveyor sorter.",
+      "Search": "conveyor sorter drain all collect pull push",
+      "ActionType": "SetConveyorSorterDrainAll",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "DrainAll": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "{SorterName} Drain All = {DrainAll}"
+    },
+    {
+      "Id": "sorter.set_mode",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Set Sorter Mode",
+      "Description": "Sets a conveyor sorter to whitelist or blacklist mode while keeping its current filter items.",
+      "Search": "conveyor sorter mode whitelist blacklist",
+      "ActionType": "SetConveyorSorterMode",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "Mode": {
+          "Type": "combo",
+          "DefaultValue": "Whitelist",
+          "Options": [
+            "Whitelist",
+            "Blacklist"
+          ]
+        }
+      },
+      "Preview": "{SorterName} mode = {Mode}"
+    },
+    {
+      "Id": "sorter.clear_filter",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Clear Sorter Filter",
+      "Description": "Clears all whitelist/blacklist items from a conveyor sorter.",
+      "Search": "conveyor sorter clear filter remove all whitelist blacklist",
+      "ActionType": "ClearConveyorSorterFilter",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        }
+      },
+      "Preview": "Clear filter on {SorterName}"
+    },
+    {
+      "Id": "sorter.add_item",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Add Item To Sorter Filter",
+      "Description": "Adds one item definition to a conveyor sorter filter. Use the Pick Item ID button in the right panel to choose from a searchable item list.",
+      "Search": "conveyor sorter add item whitelist blacklist filter pick item id searchable list item picker",
+      "ActionType": "AddConveyorSorterFilterItem",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "ItemId": {
+          "Type": "text",
+          "DefaultValue": "MyObjectBuilder_Ore/Iron",
+          "Options": []
+        }
+      },
+      "Preview": "Add {ItemId} to {SorterName} filter"
+    },
+    {
+      "Id": "sorter.remove_item",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Remove Item From Sorter Filter",
+      "Description": "Removes one item definition from a conveyor sorter filter. Use the Pick Item ID button in the right panel to choose from a searchable item list.",
+      "Search": "conveyor sorter remove item whitelist blacklist filter pick item id searchable list item picker",
+      "ActionType": "RemoveConveyorSorterFilterItem",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "ItemId": {
+          "Type": "text",
+          "DefaultValue": "MyObjectBuilder_Ore/Iron",
+          "Options": []
+        }
+      },
+      "Preview": "Remove {ItemId} from {SorterName} filter"
+    },
+    {
+      "Id": "sorter.if_allows_item",
+      "Category": "\u2705 Checks",
+      "Title": "If Sorter Allows Item",
+      "Description": "Checks whether a conveyor sorter allows an item definition through. Use the Pick Item ID button in the right panel to choose from a searchable item list.",
+      "Search": "conveyor sorter allows item isallowed whitelist blacklist check true false pick item id searchable list item picker",
+      "ActionType": "IfConveyorSorterAllowsItem",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "ItemId": {
+          "Type": "text",
+          "DefaultValue": "MyObjectBuilder_Ore/Iron",
+          "Options": []
+        }
+      },
+      "Preview": "If {SorterName} allows {ItemId}"
+    },
+    {
+      "Id": "sorter.if_drain_all",
+      "Category": "\u2705 Checks",
+      "Title": "If Sorter Drain All On",
+      "Description": "Checks whether Drain All is enabled on a conveyor sorter.",
+      "Search": "conveyor sorter drain all on check true false",
+      "ActionType": "IfConveyorSorterDrainAll",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        }
+      },
+      "Preview": "If {SorterName} Drain All is on"
+    },
+    {
+      "Id": "sorter.if_mode",
+      "Category": "\u2705 Checks",
+      "Title": "If Sorter Mode Is",
+      "Description": "Checks whether a conveyor sorter is in whitelist or blacklist mode.",
+      "Search": "conveyor sorter mode is whitelist blacklist check true false",
+      "ActionType": "IfConveyorSorterModeIs",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "Mode": {
+          "Type": "combo",
+          "DefaultValue": "Whitelist",
+          "Options": [
+            "Whitelist",
+            "Blacklist"
+          ]
+        }
+      },
+      "Preview": "If {SorterName} mode is {Mode}"
+    },
+    {
+      "Id": "sorter.status_lcd",
+      "Category": "\uD83D\uDCE6 Conveyor Sorter",
+      "Title": "Set Sorter Status LCD",
+      "Description": "Writes sorter enabled state, Drain All, mode, and filter list to an LCD.",
+      "Search": "conveyor sorter status lcd mode filter drain all",
+      "ActionType": "SetConveyorSorterStatusLcd",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "SorterName": {
+          "Type": "text",
+          "DefaultValue": "Conveyor Sorter",
+          "Options": []
+        },
+        "LcdName": {
+          "Type": "text",
+          "DefaultValue": "Sorter Status LCD",
+          "Options": []
+        }
+      },
+      "Preview": "Write {SorterName} status to {LcdName}"
     }
   ]
 }

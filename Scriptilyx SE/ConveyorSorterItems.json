@@ -1,0 +1,528 @@
+{
+  "Name": "Scriptilyx SE Conveyor Sorter Item Database",
+  "Notes": "Editable item database for Conveyor Sorter item pickers. Add modded/custom items with Category, Display, and ItemId.",
+  "Items": [
+    {
+      "Category": "Ore",
+      "Display": "Stone",
+      "ItemId": "MyObjectBuilder_Ore/Stone",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Iron",
+      "ItemId": "MyObjectBuilder_Ore/Iron",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Nickel",
+      "ItemId": "MyObjectBuilder_Ore/Nickel",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Cobalt",
+      "ItemId": "MyObjectBuilder_Ore/Cobalt",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Magnesium",
+      "ItemId": "MyObjectBuilder_Ore/Magnesium",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Silicon",
+      "ItemId": "MyObjectBuilder_Ore/Silicon",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Silver",
+      "ItemId": "MyObjectBuilder_Ore/Silver",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Gold",
+      "ItemId": "MyObjectBuilder_Ore/Gold",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Platinum",
+      "ItemId": "MyObjectBuilder_Ore/Platinum",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Uranium",
+      "ItemId": "MyObjectBuilder_Ore/Uranium",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Ice",
+      "ItemId": "MyObjectBuilder_Ore/Ice",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ore",
+      "Display": "Scrap Metal",
+      "ItemId": "MyObjectBuilder_Ore/Scrap",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Stone Gravel",
+      "ItemId": "MyObjectBuilder_Ingot/Stone",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Iron",
+      "ItemId": "MyObjectBuilder_Ingot/Iron",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Nickel",
+      "ItemId": "MyObjectBuilder_Ingot/Nickel",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Cobalt",
+      "ItemId": "MyObjectBuilder_Ingot/Cobalt",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Magnesium Powder",
+      "ItemId": "MyObjectBuilder_Ingot/Magnesium",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Silicon Wafer",
+      "ItemId": "MyObjectBuilder_Ingot/Silicon",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Silver",
+      "ItemId": "MyObjectBuilder_Ingot/Silver",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Gold",
+      "ItemId": "MyObjectBuilder_Ingot/Gold",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Platinum",
+      "ItemId": "MyObjectBuilder_Ingot/Platinum",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ingot",
+      "Display": "Uranium",
+      "ItemId": "MyObjectBuilder_Ingot/Uranium",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Steel Plate",
+      "ItemId": "MyObjectBuilder_Component/SteelPlate",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Interior Plate",
+      "ItemId": "MyObjectBuilder_Component/InteriorPlate",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Construction Component",
+      "ItemId": "MyObjectBuilder_Component/Construction",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Metal Grid",
+      "ItemId": "MyObjectBuilder_Component/MetalGrid",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Girder",
+      "ItemId": "MyObjectBuilder_Component/Girder",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Small Steel Tube",
+      "ItemId": "MyObjectBuilder_Component/SmallTube",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Large Steel Tube",
+      "ItemId": "MyObjectBuilder_Component/LargeTube",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Motor",
+      "ItemId": "MyObjectBuilder_Component/Motor",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Computer",
+      "ItemId": "MyObjectBuilder_Component/Computer",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Display",
+      "ItemId": "MyObjectBuilder_Component/Display",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Bulletproof Glass",
+      "ItemId": "MyObjectBuilder_Component/BulletproofGlass",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Reactor Component",
+      "ItemId": "MyObjectBuilder_Component/Reactor",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Thrust Component",
+      "ItemId": "MyObjectBuilder_Component/Thrust",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Gravity Generator Component",
+      "ItemId": "MyObjectBuilder_Component/GravityGenerator",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Medical Component",
+      "ItemId": "MyObjectBuilder_Component/Medical",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Radio Communication Component",
+      "ItemId": "MyObjectBuilder_Component/RadioCommunication",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Detector Component",
+      "ItemId": "MyObjectBuilder_Component/Detector",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Explosives",
+      "ItemId": "MyObjectBuilder_Component/Explosives",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Solar Cell",
+      "ItemId": "MyObjectBuilder_Component/SolarCell",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Power Cell",
+      "ItemId": "MyObjectBuilder_Component/PowerCell",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Superconductor",
+      "ItemId": "MyObjectBuilder_Component/Superconductor",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Canvas",
+      "ItemId": "MyObjectBuilder_Component/Canvas",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Component",
+      "Display": "Zone Chip",
+      "ItemId": "MyObjectBuilder_Component/ZoneChip",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "5.56x45mm NATO Magazine",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/NATO_5p56x45mm",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "25x184mm NATO Ammo Container",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/NATO_25x184mm",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "200mm Missile Container",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/Missile200mm",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Automatic Rifle Magazine",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/AutomaticRifleGun_Mag_20rd",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Precise Rifle Magazine",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/PreciseAutomaticRifleGun_Mag_5rd",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Rapid Rifle Magazine",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/RapidFireAutomaticRifleGun_Mag_50rd",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Elite Rifle Magazine",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/UltimateAutomaticRifleGun_Mag_30rd",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Autocannon Magazine",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/AutocannonClip",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Assault Cannon Shell",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/LargeCalibreAmmo",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Artillery Shell",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/MediumCalibreAmmo",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Small Railgun Sabot",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/SmallRailgunAmmo",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Ammo",
+      "Display": "Large Railgun Sabot",
+      "ItemId": "MyObjectBuilder_AmmoMagazine/LargeRailgunAmmo",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Consumable",
+      "Display": "Hydrogen Bottle",
+      "ItemId": "MyObjectBuilder_GasContainerObject/HydrogenBottle",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Consumable",
+      "Display": "Oxygen Bottle",
+      "ItemId": "MyObjectBuilder_OxygenContainerObject/OxygenBottle",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Consumable",
+      "Display": "Medkit",
+      "ItemId": "MyObjectBuilder_ConsumableItem/Medkit",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Consumable",
+      "Display": "Powerkit",
+      "ItemId": "MyObjectBuilder_ConsumableItem/Powerkit",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Consumable",
+      "Display": "Clang Cola",
+      "ItemId": "MyObjectBuilder_ConsumableItem/ClangCola",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Consumable",
+      "Display": "Cosmic Coffee",
+      "ItemId": "MyObjectBuilder_ConsumableItem/CosmicCoffee",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Welder 1",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/WelderItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Welder 2",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/Welder2Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Welder 3",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/Welder3Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Welder 4",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/Welder4Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Grinder 1",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/AngleGrinderItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Grinder 2",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/AngleGrinder2Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Grinder 3",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/AngleGrinder3Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Grinder 4",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/AngleGrinder4Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Drill 1",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/HandDrillItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Drill 2",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/HandDrill2Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Drill 3",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/HandDrill3Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Tool",
+      "Display": "Drill 4",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/HandDrill4Item",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Weapon",
+      "Display": "Automatic Rifle",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/AutomaticRifleItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Weapon",
+      "Display": "Precise Rifle",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/PreciseAutomaticRifleItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Weapon",
+      "Display": "Rapid Rifle",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/RapidFireAutomaticRifleItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Weapon",
+      "Display": "Elite Rifle",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/UltimateAutomaticRifleItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Weapon",
+      "Display": "Basic Handheld Launcher",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/BasicHandHeldLauncherItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Weapon",
+      "Display": "Advanced Handheld Launcher",
+      "ItemId": "MyObjectBuilder_PhysicalGunObject/AdvancedHandHeldLauncherItem",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Misc",
+      "Display": "Datapad",
+      "ItemId": "MyObjectBuilder_Datapad/Datapad",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Misc",
+      "Display": "Package",
+      "ItemId": "MyObjectBuilder_Package/Package",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Misc",
+      "Display": "Space Credit",
+      "ItemId": "MyObjectBuilder_PhysicalObject/SpaceCredit",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "Item databases (*.json;*.txt;*.csv)",
+      "Display": "*.json;*.txt;*.csv",
+      "ItemId": "All files (*.*)|*.*",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "No item IDs were found. Use JSON, Category",
+      "Display": "Display",
+      "ItemId": "ItemId, Display|ItemId, or raw MyObjectBuilder_* lines.",
+      "Source": "Vanilla Database"
+    },
+    {
+      "Category": "JSON database (*.json)",
+      "Display": "*.json",
+      "ItemId": "Text list (*.txt)|*.txt",
+      "Source": "Vanilla Database"
+    }
+  ]
+}

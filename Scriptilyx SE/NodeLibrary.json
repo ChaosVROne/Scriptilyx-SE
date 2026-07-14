@@ -1264,6 +1264,491 @@
       "Preview": "{BlockName} velocity {VelocityRPM} RPM"
     },
     {
+      "Id": "mechanical.rotor_on",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor On",
+      "Description": "Turns a rotor on.",
+      "Search": "",
+      "ActionType": "SetRotorEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Rotor On"
+    },
+    {
+      "Id": "mechanical.rotor_off",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Off",
+      "Description": "Turns a rotor off.",
+      "Search": "",
+      "ActionType": "SetRotorEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Rotor Off"
+    },
+    {
+      "Id": "mechanical.rotor_stop",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Stop",
+      "Description": "Stops a rotor by setting RPM to 0.",
+      "Search": "",
+      "ActionType": "SetRotorVelocity",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "VelocityRPM": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Stop"
+    },
+    {
+      "Id": "mechanical.rotor_limits",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Set Limits",
+      "Description": "Sets rotor lower and upper angle limits in degrees.",
+      "Search": "",
+      "ActionType": "SetRotorLimits",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "LowerLimitDeg": {
+          "Type": "number",
+          "DefaultValue": "-90",
+          "Options": []
+        },
+        "UpperLimitDeg": {
+          "Type": "number",
+          "DefaultValue": "90",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Set Limits"
+    },
+    {
+      "Id": "mechanical.rotor_clear_limits",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Clear Limits",
+      "Description": "Clears rotor limits so the rotor can rotate freely.",
+      "Search": "",
+      "ActionType": "ClearRotorLimits",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Clear Limits"
+    },
+    {
+      "Id": "mechanical.rotor_torque",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Set Torque",
+      "Description": "Sets rotor torque.",
+      "Search": "",
+      "ActionType": "SetRotorTorque",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Torque": {
+          "Type": "number",
+          "DefaultValue": "1000000",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Set Torque"
+    },
+    {
+      "Id": "mechanical.rotor_braking_torque",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Set Braking Torque",
+      "Description": "Sets rotor braking torque.",
+      "Search": "",
+      "ActionType": "SetRotorBrakingTorque",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "BrakingTorque": {
+          "Type": "number",
+          "DefaultValue": "1000000",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Set Braking Torque"
+    },
+    {
+      "Id": "mechanical.rotor_displacement",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Set Displacement",
+      "Description": "Sets rotor displacement.",
+      "Search": "",
+      "ActionType": "SetRotorDisplacement",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Displacement": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Set Displacement"
+    },
+    {
+      "Id": "mechanical.rotor_lock_on",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Lock On",
+      "Description": "Turns rotor lock on.",
+      "Search": "",
+      "ActionType": "SetRotorLock",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Locked": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Rotor Lock On"
+    },
+    {
+      "Id": "mechanical.rotor_lock_off",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Lock Off",
+      "Description": "Turns rotor lock off.",
+      "Search": "",
+      "ActionType": "SetRotorLock",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Locked": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Rotor Lock Off"
+    },
+    {
+      "Id": "mechanical.rotor_share_inertia",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Share Inertia Tensor",
+      "Description": "Turns Share Inertia Tensor on or off when available.",
+      "Search": "",
+      "ActionType": "SetRotorShareInertiaTensor",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Rotor Share Inertia Tensor"
+    },
+    {
+      "Id": "mechanical.rotor_attach",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Attach Top",
+      "Description": "Attaches a rotor head if possible.",
+      "Search": "",
+      "ActionType": "RotorAttach",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Attach Top"
+    },
+    {
+      "Id": "mechanical.rotor_detach",
+      "Category": "\u2699 Mechanical",
+      "Title": "Rotor Detach Top",
+      "Description": "Detaches the rotor head.",
+      "Search": "",
+      "ActionType": "RotorDetach",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        }
+      },
+      "Preview": "Rotor Detach Top"
+    },
+    {
+      "Id": "mechanical.if_rotor_attached",
+      "Category": "\u2699 Mechanical",
+      "Title": "If Rotor Attached",
+      "Description": "Checks whether the rotor head is attached.",
+      "Search": "",
+      "ActionType": "IfRotorAttached",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        }
+      },
+      "Preview": "If Rotor Attached"
+    },
+    {
+      "Id": "mechanical.if_rotor_locked",
+      "Category": "\u2699 Mechanical",
+      "Title": "If Rotor Locked",
+      "Description": "Checks whether rotor lock is on.",
+      "Search": "",
+      "ActionType": "IfRotorLocked",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        }
+      },
+      "Preview": "If Rotor Locked"
+    },
+    {
+      "Id": "mechanical.if_rotor_angle_above",
+      "Category": "\u2699 Mechanical",
+      "Title": "If Rotor Angle Above",
+      "Description": "Checks whether the rotor angle is above a degree value.",
+      "Search": "",
+      "ActionType": "IfRotorAngleAbove",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "AngleDeg": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "If Rotor Angle Above"
+    },
+    {
+      "Id": "mechanical.if_rotor_angle_below",
+      "Category": "\u2699 Mechanical",
+      "Title": "If Rotor Angle Below",
+      "Description": "Checks whether the rotor angle is below a degree value.",
+      "Search": "",
+      "ActionType": "IfRotorAngleBelow",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "AngleDeg": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "If Rotor Angle Below"
+    },
+    {
+      "Id": "mechanical.rotor_status_lcd",
+      "Category": "\u2699 Mechanical",
+      "Title": "Set Rotor Status LCD",
+      "Description": "Writes rotor status to an LCD/text panel.",
+      "Search": "",
+      "ActionType": "SetRotorStatusLcd",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Rotor",
+          "Options": []
+        },
+        "LcdName": {
+          "Type": "text",
+          "DefaultValue": "Rotor Status LCD",
+          "Options": []
+        }
+      },
+      "Preview": "Set Rotor Status LCD"
+    },
+    {
       "Id": "utility.timer_trigger",
       "Category": "\u26A1 Power / Air / Utility",
       "Title": "Timer Trigger",
@@ -2552,33 +3037,6 @@
         }
       },
       "Preview": "Set {BlockName} displacement to {Displacement}"
-    },
-    {
-      "Id": "hinge.set_safety_lock_speed",
-      "Category": "\u2699 Mechanical",
-      "Title": "Hinge Set Safety Lock Speed",
-      "Description": "Sets the hinge safety lock speed value.",
-      "Search": "hinge safety lock speed motor stator",
-      "ActionType": "SetHingeSafetyLockSpeed",
-      "InputPorts": [
-        "In"
-      ],
-      "OutputPorts": [
-        "Next"
-      ],
-      "Properties": {
-        "BlockName": {
-          "Type": "text",
-          "DefaultValue": "Hinge",
-          "Options": []
-        },
-        "SafetyLockSpeed": {
-          "Type": "number",
-          "DefaultValue": "0.5",
-          "Options": []
-        }
-      },
-      "Preview": "Set {BlockName} safety lock speed to {SafetyLockSpeed}"
     },
     {
       "Id": "hinge.lock_on",

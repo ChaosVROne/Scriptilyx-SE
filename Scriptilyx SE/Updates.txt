@@ -1,12 +1,5 @@
 Updates for:
--Added version number to title and about section
--Script that generates in the SCRIPT PREVIEW section did not generate correctly after clicking on a node
--Added Conveyor Sorter support
+-Added Rotor Nodes
 -Updated node references
 -Updated workflow
--Fixed issue with renaming Custom node
--Updated Custom Code node
--Removed duplicate Custom Code node
--Updated AI Blocks support
--Updated Event Controller support
 -Updated user guide

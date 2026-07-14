@@ -17,5 +17,6 @@ Go to the **Releases** section and download the latest `.zip` file.
 ## Source Code
 
 The source code is not included in this repository.
-<img width="1913" height="1053" alt="image" src="https://github.com/user-attachments/assets/b930c1ca-144b-4f86-a8cc-499cf76fb760" />
+<img width="1913" height="1054" alt="image" src="https://github.com/user-attachments/assets/75e27c27-dd4e-4ce9-93f0-3e935efb622c" />
+
 

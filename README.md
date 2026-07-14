@@ -11,6 +11,7 @@ Go to the **Releases** section and download the latest `.zip` file.
 
 - `Scriptilyx SE.exe` - Main application
 - `NodeLibrary.json` - Node database
+- `ConveyorSorterItems.json` - Sorter item picker database
 - Runtime files required by the app
 - Beginner user guide: ScriptilyxSE_Beginner_User_Guide.html
 

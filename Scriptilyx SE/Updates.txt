@@ -1,5 +1,12 @@
 Updates for:
--Added Rotor Nodes
--Updated node references
--Updated workflow
--Updated user guide
+-Added a new Wheel Node
+-Added If Group Block State
+-Added If Door State
+-Added More If
+-Added new nodes without automatically moving or scrolling the graph view
+-New nodes now appear within the currently visible graph area
+-Preserved normal manual graph panning and navigation
+-Removed unused automatic node-scrolling code
+-Improved the node-creation experience by keeping the current viewport position unchanged
+-Updated how Node Packs are handled
+-Updated Guide

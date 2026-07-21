@@ -5080,6 +5080,1048 @@
         }
       },
       "Preview": "Write {SorterName} status to {LcdName}"
+    },
+    {
+      "Id": "wheel.on",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel On",
+      "Description": "Turns a wheel suspension block on.",
+      "Search": "wheel suspension on enable functional",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel On: {BlockName}"
+    },
+    {
+      "Id": "wheel.off",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Off",
+      "Description": "Turns a wheel suspension block off.",
+      "Search": "wheel suspension off disable functional",
+      "ActionType": "SetBlockEnabled",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "Enabled": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Off: {BlockName}"
+    },
+    {
+      "Id": "wheel.propulsion_on",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Propulsion On",
+      "Description": "Enables propulsion directly through IMyMotorSuspension.Propulsion.",
+      "Search": "wheel propulsion drive motor on",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Propulsion",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Propulsion On: {BlockName}"
+    },
+    {
+      "Id": "wheel.propulsion_off",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Propulsion Off",
+      "Description": "Disables propulsion directly through IMyMotorSuspension.Propulsion.",
+      "Search": "wheel propulsion drive motor off",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Propulsion",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Propulsion Off: {BlockName}"
+    },
+    {
+      "Id": "wheel.steering_on",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Steering On",
+      "Description": "Enables steering directly through IMyMotorSuspension.Steering.",
+      "Search": "wheel steering steer on",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Steering",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Steering On: {BlockName}"
+    },
+    {
+      "Id": "wheel.steering_off",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Steering Off",
+      "Description": "Disables steering directly through IMyMotorSuspension.Steering.",
+      "Search": "wheel steering steer off",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Steering",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Steering Off: {BlockName}"
+    },
+    {
+      "Id": "wheel.brake_on",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Brake On",
+      "Description": "Applies the wheel brake directly through IMyMotorSuspension.Brake. This is the individual wheel brake, not the cockpit parking-brake command.",
+      "Search": "wheel brake handbrake parking brake on",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Brake",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Brake On: {BlockName}"
+    },
+    {
+      "Id": "wheel.brake_off",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Brake Off",
+      "Description": "Releases the wheel brake directly through IMyMotorSuspension.Brake.",
+      "Search": "wheel brake handbrake parking brake off",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Brake",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Brake Off: {BlockName}"
+    },
+    {
+      "Id": "wheel.invert_steering_on",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Invert Steering On",
+      "Description": "Enables inverted steering directly through IMyMotorSuspension.InvertSteer.",
+      "Search": "wheel invert steering on",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "InvertSteer",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Invert Steering On: {BlockName}"
+    },
+    {
+      "Id": "wheel.invert_steering_off",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Invert Steering Off",
+      "Description": "Disables inverted steering directly through IMyMotorSuspension.InvertSteer.",
+      "Search": "wheel invert steering off",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "InvertSteer",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Invert Steering Off: {BlockName}"
+    },
+    {
+      "Id": "wheel.invert_propulsion_on",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Invert Propulsion On",
+      "Description": "Enables inverted propulsion directly through IMyMotorSuspension.InvertPropulsion.",
+      "Search": "wheel invert propulsion on",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "InvertPropulsion",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Invert Propulsion On: {BlockName}"
+    },
+    {
+      "Id": "wheel.invert_propulsion_off",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Invert Propulsion Off",
+      "Description": "Disables inverted propulsion directly through IMyMotorSuspension.InvertPropulsion.",
+      "Search": "wheel invert propulsion off",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "InvertPropulsion",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "false",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel Invert Propulsion Off: {BlockName}"
+    },
+    {
+      "Id": "wheel.power",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Power",
+      "Description": "Sets wheel power from 0 to 100 percent through IMyMotorSuspension.Power.",
+      "Search": "wheel power torque drive force",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Power",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "100",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Power: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.friction",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Friction",
+      "Description": "Sets wheel friction from 0 to 100 percent through IMyMotorSuspension.Friction.",
+      "Search": "wheel friction grip traction",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Friction",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "50",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Friction: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.strength",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Strength",
+      "Description": "Sets suspension strength from 0 to 100 percent through IMyMotorSuspension.Strength.",
+      "Search": "wheel suspension strength spring",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Strength",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "30",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Strength: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.damping",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Damping (Compatibility)",
+      "Description": "Attempts to set the legacy Damping terminal property. Current vanilla programmable-block API exposes Damping as read-only, so this is only expected to work when the terminal property remains writable or a mod supplies it.",
+      "Search": "wheel suspension damping shock compatibility legacy modded read only",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Damping",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "50",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Damping: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.height",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Height Offset",
+      "Description": "Sets suspension height in meters through IMyMotorSuspension.Height.",
+      "Search": "wheel suspension height offset raise lower",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Height",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Height Offset: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.max_steer_angle",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Max Steer Angle",
+      "Description": "Sets maximum steering angle in degrees. Generated scripts convert the value to radians for IMyMotorSuspension.MaxSteerAngle.",
+      "Search": "wheel max steer angle steering angle",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "MaxSteerAngle",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "30",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Max Steer Angle: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.steer_speed",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Steer Speed (Compatibility)",
+      "Description": "Attempts to set the legacy SteerSpeed terminal property. Current vanilla programmable-block API exposes SteerSpeed as read-only, so this is only expected to work when the terminal property remains writable or a mod supplies it.",
+      "Search": "wheel steering speed steer speed compatibility legacy modded read only",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "SteerSpeed",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Steer Speed: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.steer_return_speed",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Steer Return Speed (Compatibility)",
+      "Description": "Attempts to set the legacy SteerReturnSpeed terminal property. Current vanilla programmable-block API exposes SteerReturnSpeed as read-only, so this is only expected to work when the terminal property remains writable or a mod supplies it.",
+      "Search": "wheel steering return speed compatibility legacy modded read only",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "SteerReturnSpeed",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Set Steer Return Speed: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.propulsion_override_forward",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Propulsion Override Forward",
+      "Description": "Sets propulsion override directly. Values are clamped from -1 to 1; positive values drive forward.",
+      "Search": "wheel propulsion override forward drive",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "PropulsionOverride",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Propulsion Override Forward: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.propulsion_override_reverse",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Propulsion Override Reverse",
+      "Description": "Sets propulsion override directly. Values are clamped from -1 to 1; negative values drive in reverse.",
+      "Search": "wheel propulsion override reverse backward",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "PropulsionOverride",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "-1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Propulsion Override Reverse: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.propulsion_override_clear",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Clear Propulsion Override",
+      "Description": "Clears the direct propulsion override by setting it to 0.",
+      "Search": "wheel clear propulsion override stop",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "PropulsionOverride",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Clear Propulsion Override: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.steering_override_left",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Steering Override Left",
+      "Description": "Sets steering override directly. Values are clamped from -1 to 1.",
+      "Search": "wheel steering override left",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "SteeringOverride",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "-1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Steering Override Left: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.steering_override_right",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Steering Override Right",
+      "Description": "Sets steering override directly. Values are clamped from -1 to 1.",
+      "Search": "wheel steering override right",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "SteeringOverride",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Steering Override Right: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.steering_override_clear",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Clear Steering Override",
+      "Description": "Clears the direct steering override by setting it to 0.",
+      "Search": "wheel clear steering override center",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "SteeringOverride",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "0",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel Clear Steering Override: {BlockName} {PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.apply_action",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Apply Action",
+      "Description": "Applies any terminal ActionId to a wheel suspension.",
+      "Search": "wheel apply terminal action custom scanner",
+      "ActionType": "ApplyTerminalAction",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "ActionId": {
+          "Type": "text",
+          "DefaultValue": "OnOff_On",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel {BlockName}.ApplyAction({ActionId})"
+    },
+    {
+      "Id": "wheel.custom_bool",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Custom Bool Property",
+      "Description": "Sets any bool terminal property on a wheel suspension.",
+      "Search": "wheel custom bool terminal property scanner",
+      "ActionType": "SetTerminalBool",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Brake",
+          "Options": []
+        },
+        "Value": {
+          "Type": "combo",
+          "DefaultValue": "true",
+          "Options": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "Preview": "Wheel {BlockName}.{PropertyId} = {Value}"
+    },
+    {
+      "Id": "wheel.custom_float",
+      "Category": "\uD83D\uDEDE Wheels / Suspension",
+      "Title": "Wheel Set Custom Float Property",
+      "Description": "Sets any float terminal property on a wheel suspension.",
+      "Search": "wheel custom float terminal property scanner",
+      "ActionType": "SetTerminalFloat",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "Next"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Wheel Suspension",
+          "Options": []
+        },
+        "PropertyId": {
+          "Type": "text",
+          "DefaultValue": "Power",
+          "Options": []
+        },
+        "Value": {
+          "Type": "number",
+          "DefaultValue": "1",
+          "Options": []
+        }
+      },
+      "Preview": "Wheel {BlockName}.{PropertyId} = {Value}"
+    },
+    {
+      "Id": "check.door_state",
+      "Category": "\u2705 Checks",
+      "Title": "If Door State",
+      "Description": "Checks whether one door is open, closed, opening, or closing, then routes through True or False.",
+      "Search": "door state open closed opening closing check true false",
+      "ActionType": "IfDoorState",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "BlockName": {
+          "Type": "text",
+          "DefaultValue": "Door",
+          "Options": []
+        },
+        "State": {
+          "Type": "combo",
+          "DefaultValue": "Open",
+          "Options": [
+            "Open",
+            "Closed",
+            "Opening",
+            "Closing"
+          ]
+        }
+      },
+      "Preview": "If {BlockName} is {State}"
+    },
+    {
+      "Id": "check.group_block_state",
+      "Category": "\u2705 Checks",
+      "Title": "If Group Block State",
+      "Description": "Checks all or any blocks in a named group for a selected state, then routes through True or False.",
+      "Search": "group blocks state on off open closed functional working connected locked active stockpile depressurize check true false",
+      "ActionType": "IfGroupBlockState",
+      "InputPorts": [
+        "In"
+      ],
+      "OutputPorts": [
+        "True",
+        "False"
+      ],
+      "Properties": {
+        "GroupName": {
+          "Type": "text",
+          "DefaultValue": "Block Group",
+          "Options": []
+        },
+        "State": {
+          "Type": "combo",
+          "DefaultValue": "On",
+          "Options": [
+            "On",
+            "Off",
+            "Open",
+            "Closed",
+            "Opening",
+            "Closing",
+            "Functional",
+            "Not Functional",
+            "Working",
+            "Not Working",
+            "Connected",
+            "Disconnected",
+            "Locked",
+            "Unlocked",
+            "Active",
+            "Inactive",
+            "Stockpiling",
+            "Not Stockpiling",
+            "Depressurizing",
+            "Not Depressurizing"
+          ]
+        },
+        "MatchMode": {
+          "Type": "combo",
+          "DefaultValue": "All Blocks",
+          "Options": [
+            "All Blocks",
+            "Any Block"
+          ]
+        }
+      },
+      "Preview": "If {MatchMode} in {GroupName} are {State}"
     }
   ]
 }

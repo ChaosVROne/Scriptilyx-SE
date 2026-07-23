@@ -3,6 +3,8 @@ Scriptilyx-SE is a desktop tool for building Space Engineers programmable block 
 
 This repository is used for public downloads, documentation, and release files.
 
+<img width="1913" height="1047" alt="image" src="https://github.com/user-attachments/assets/d35f70eb-ceec-410f-987f-62936d9e170a" />
+
 ## Download
 
 Go to the **Releases** section and download the latest `.zip` file.
@@ -18,7 +20,7 @@ Go to the **Releases** section and download the latest `.zip` file.
 ## Source Code
 
 The source code is not included in this repository.
-<img width="1913" height="1047" alt="image" src="https://github.com/user-attachments/assets/d35f70eb-ceec-410f-987f-62936d9e170a" />
+
 
 
 

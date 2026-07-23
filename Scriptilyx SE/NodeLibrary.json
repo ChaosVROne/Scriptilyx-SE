@@ -2282,8 +2282,8 @@
       "Id": "button.command",
       "Category": "\uD83D\uDD18 Buttons / Arguments",
       "Title": "Button Command",
-      "Description": "Routes a programmable block argument to a True or False branch.",
-      "Search": "button argument command route",
+      "Description": "Use this with a Space Engineers button panel. Set the button to run the programmable block with this argument.",
+      "Search": "button panel command argument press trigger",
       "ActionType": "IfArgumentEquals",
       "InputPorts": [
         "In"
@@ -2295,7 +2295,7 @@
       "Properties": {
         "Argument": {
           "Type": "text",
-          "DefaultValue": "startup",
+          "DefaultValue": "button_1",
           "Options": []
         }
       },

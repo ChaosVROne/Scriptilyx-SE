@@ -1,12 +1,4 @@
-Updates for:
--Added a new Wheel Node
--Added If Group Block State
--Added If Door State
--Added More If
--Added new nodes without automatically moving or scrolling the graph view
--New nodes now appear within the currently visible graph area
--Preserved normal manual graph panning and navigation
--Removed unused automatic node-scrolling code
--Improved the node-creation experience by keeping the current viewport position unchanged
--Updated how Node Packs are handled
--Updated Guide
+Update:
+-Updated how Node Packs are handled v2
+(When uninstalling node packs they would uninstall some main ones in the NODE DATABASE as well)
+-Replaced all 16 toolbar emojis with embedded PNG icons

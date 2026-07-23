@@ -5,6 +5,10 @@ This repository is used for public downloads, documentation, and release files.
 
 <img width="1913" height="1047" alt="image" src="https://github.com/user-attachments/assets/d35f70eb-ceec-410f-987f-62936d9e170a" />
 
+## ActionId
+For those who want to know some of the ActionId for the blocks.
+<img width="1153" height="1364" alt="ActionId&#39;s" src="https://github.com/user-attachments/assets/224e7ad7-0b8d-4350-bbf3-cb734668b10e" />
+
 ## Download
 
 Go to the **Releases** section and download the latest `.zip` file.
